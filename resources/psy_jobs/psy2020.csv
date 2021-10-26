@@ -1,0 +1,59 @@
+﻿Area Name,Employment(1),Annual mean wage(2),"Employment per 1,000 jobs",Location Quotient
+Alabama(0100000),         920,       37850,       0.486,        0.58
+Alaska(0200000),         240,       56810,       0.801,        0.95
+Arizona(0400000),        3140,       42650,       1.107,        1.32
+Arkansas(0500000),         950,       41170,       0.805,        0.96
+California(0600000),       16920,       73150,       1.030,        1.23
+Colorado(0800000),        1690,       47950,       0.657,        0.78
+Connecticut(0900000),        1620,       66500,       1.053,        1.25
+Delaware(1000000),         380,       51710,       0.887,        1.06
+District of Columbia(1100000),         640,       73490,       0.934,        1.11
+Florida(1200000),        4150,       44740,       0.491,        0.58
+Georgia(1300000),         970,       44640,       0.225,        0.27
+Hawaii(1500000),         550,       55920,       0.952,        1.13
+Idaho(1600000),         820,       50560,       1.144,        1.36
+Illinois(1700000),        3290,       59520,       0.584,        0.70
+Indiana(1800000),        1780,       46820,       0.609,        0.73
+Iowa(1900000),         710,       49610,       0.483,        0.58
+Kansas(2000000),         930,       45270,       0.697,        0.83
+Kentucky(2100000),        1190,       45820,       0.670,        0.80
+Louisiana(2200000),        1140,       42810,       0.631,        0.75
+Maine(2300000),        1270,       57800,       2.201,        2.62
+Maryland(2400000),        2520,       55260,       0.997,        1.19
+Massachusetts(2500000),        6920,       49270,       2.065,        2.46
+Michigan(2600000),        4190,       50160,       1.068,        1.27
+Minnesota(2700000),        2510,       63510,       0.926,        1.10
+Mississippi(2800000),         930,       41850,       0.863,        1.03
+Missouri(2900000),        1570,       43930,       0.585,        0.70
+Montana(3000000),         300,       38820,       0.649,        0.77
+Nebraska(3100000),         960,       35710,       1.014,        1.21
+Nevada(3200000),         670,       60620,       0.539,        0.64
+New Hampshire(3300000),         440,       62700,       0.717,        0.85
+New Jersey(3400000),        1610,       91070,       0.426,        0.51
+New Mexico(3500000),         450,       51420,       0.567,        0.68
+New York(3600000),       11020,       64750,       1.268,        1.51
+North Carolina(3700000),        2250,       56530,       0.525,        0.63
+North Dakota(3800000),         220,       51700,       0.554,        0.66
+Ohio(3900000),        7090,       47830,       1.380,        1.64
+Oklahoma(4000000),        1230,       42920,       0.789,        0.94
+Oregon(4100000),        1710,       49700,       0.945,        1.13
+Pennsylvania(4200000),        7920,       39510,       1.437,        1.71
+Puerto Rico(7200000),         360,       29700,       0.434,        0.52
+Rhode Island(4400000),         480,       65430,       1.090,        1.30
+South Carolina(4500000),         800,       38970,       0.397,        0.47
+South Dakota(4600000),         320,       41260,       0.767,        0.91
+Tennessee(4700000),        1220,       43070,       0.421,        0.50
+Texas(4800000),        5150,       45180,       0.425,        0.51
+Utah(4900000),         630,       50700,       0.422,        0.50
+Vermont(5000000),         590,       48000,       2.104,        2.51
+Virginia(5100000),        4310,       52450,       1.165,        1.39
+Washington(5300000),        2660,       55880,       0.834,        0.99
+West Virginia(5400000),         110,       42400,       0.169,        0.20
+Wisconsin(5500000),        2440,       50490,       0.899,        1.07
+Wyoming(5600000),         270,       49650,       1.049,        1.25
+,,,,
+(1)Estimates for detailed occupations do not sum to the totals because the totals include occupations not shown separately. Estimates do not include self-employed workers.,,,,
+"(2)Annual wages have been calculated by multiplying the corresponding hourly wage by 2,080 hours.",,,,
+,,,,
+SOC code: Standard Occupational Classification code -- see http://www.bls.gov/soc/home.htm,,,,
+"Date extracted on :Oct 25, 2021",,,,
