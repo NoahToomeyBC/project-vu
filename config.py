@@ -1,1 +1,1 @@
-db_password = "piechartspassword"
+db_password = 'piechartspassword'
