@@ -1,0 +1,90 @@
+## Master By State Table
+
+SELECT * INTO master_bystate_table
+FROM adult_access2019
+LEFT JOIN adult_access2020 using("State")
+LEFT JOIN adult_access_clean2021 using("State")
+LEFT JOIN adult_suicide_clean2019 using("State")
+LEFT JOIN adult_suicide_clean2020 using("State")
+LEFT JOIN adult_suicide_clean2021 using("State")
+LEFT JOIN adult_uninsured2019 using("State")
+LEFT JOIN adult_uninsured2020 using("State")
+LEFT JOIN adult_uninsured_clean2021 using("State")
+LEFT JOIN adult_unmet_needs_clean_2019 using("State")
+LEFT JOIN adult_unmet_needs_clean_2020 using("State")
+LEFT JOIN adult_unmet_need_clean2021 using("State")
+LEFT JOIN ami_csv2019 using("State")
+LEFT JOIN ami_csv2020 using("State")
+LEFT JOIN ami_csv2021 using("State")
+LEFT JOIN children_no_mh_clean2020 using("State")
+LEFT JOIN mh_workforce_clean2020 using("State")
+LEFT JOIN mh_workforce_clean2021 using("State")
+LEFT JOIN no_doc_adult2019_clean using("State")
+LEFT JOIN no_doc_adult2020_clean using("State")
+LEFT JOIN no_doc_adult2021_clean using("State")
+LEFT JOIN youth_ami_csv_clean_2019 using("State")
+LEFT JOIN youth_ami_csv_clean_2020 using("State")
+LEFT JOIN youth_ami_clean2021 using("State")
+LEFT JOIN youth_mde_clean2019 using("State")
+LEFT JOIN youth_mde_clean2020 using ("State")
+LEFT JOIN youth_mde_clean2021 using ("State")
+LEFT JOIN youth_no_mh_service2019 using ("State")
+LEFT JOIN youth_no_mh_service2020 using ("State")
+LEFT JOIN youth_no_mh_service2021 using ("State")
+LEFT JOIN youth_some_mh_service_clean2019 using ("State")
+LEFT JOIN youth_some_mh_service_clean2020 using ("State")
+LEFT JOIN youth_some_mh_service_clean2021 using ("State")
+LEFT JOIN youth_sub_dis2019_clean using ("State");
+
+SELECT * FROM master_bystate_table;
+
+
+## Adult Table
+SELECT * INTO master_adult_table
+FROM adult_access2019
+LEFT JOIN adult_access2020 using("State")
+LEFT JOIN adult_access_clean2021 using("State")
+LEFT JOIN adult_suicide_clean2019 using("State")
+LEFT JOIN adult_suicide_clean2020 using("State")
+LEFT JOIN adult_suicide_clean2021 using("State")
+LEFT JOIN adult_uninsured2019 using("State")
+LEFT JOIN adult_uninsured2020 using("State")
+LEFT JOIN adult_uninsured_clean2021 using("State")
+LEFT JOIN adult_unmet_needs_clean_2019 using("State")
+LEFT JOIN adult_unmet_needs_clean_2020 using("State")
+LEFT JOIN adult_unmet_need_clean2021 using("State")
+LEFT JOIN ami_csv2019 using("State")
+LEFT JOIN ami_csv2020 using("State")
+LEFT JOIN ami_csv2021 using("State")
+LEFT JOIN mh_workforce_clean2020 using("State")
+LEFT JOIN mh_workforce_clean2021 using("State")
+LEFT JOIN no_doc_adult2019_clean using("State")
+LEFT JOIN no_doc_adult2020_clean using("State")
+LEFT JOIN no_doc_adult2021_clean using("State");
+
+
+SELECT * FROM master_adult_table;
+
+
+
+## Youth Table
+
+SELECT * INTO master_youth_table
+FROM children_no_mh_clean2020
+LEFT JOIN mh_workforce_clean2020 using("State")
+LEFT JOIN mh_workforce_clean2021 using("State")
+LEFT JOIN youth_ami_csv_clean_2019 using("State")
+LEFT JOIN youth_ami_csv_clean_2020 using("State")
+LEFT JOIN youth_ami_clean2021 using("State")
+LEFT JOIN youth_mde_clean2019 using("State")
+LEFT JOIN youth_mde_clean2020 using ("State")
+LEFT JOIN youth_mde_clean2021 using ("State")
+LEFT JOIN youth_no_mh_service2019 using ("State")
+LEFT JOIN youth_no_mh_service2020 using ("State")
+LEFT JOIN youth_no_mh_service2021 using ("State")
+LEFT JOIN youth_some_mh_service_clean2019 using ("State")
+LEFT JOIN youth_some_mh_service_clean2020 using ("State")
+LEFT JOIN youth_some_mh_service_clean2021 using ("State")
+LEFT JOIN youth_sub_dis2019_clean using ("State");
+
+SELECT * FROM master_youth_table;
