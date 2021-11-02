@@ -133,6 +133,7 @@ A [python script](https://github.com/PazilatNur/project-vu/blob/main/dataframe_s
   - western_table
   - southern_table
   - midwest_table
+ - Adult-only version of Regional Tables
  - Youth and Adult Tables
   - Additionally, tables were split from the master_bystate_table to only include either youth or adult data.
  - Schemas
