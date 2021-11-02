@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/KimBro763/project-vu">
-    <img src="https://beingalivela.org/wp-content/uploads/2015/01/mental-health.jpg" alt="Logo" width="400" height="400">
+    <img src="https://beingalivela.org/wp-content/uploads/2015/01/mental-health.jpg" alt="Logo" width="500" height="400">
   </a>
 
 <h3 align="center"> Impacts of Mental Health Based on Access to Care and Employment </h3>
