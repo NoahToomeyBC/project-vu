@@ -88,3 +88,142 @@ LEFT JOIN youth_some_mh_service_clean2021 using ("State")
 LEFT JOIN youth_sub_dis2019_clean using ("State");
 
 SELECT * FROM master_youth_table;
+
+## Northeast
+SELECT * FROM master_youth_table;
+
+SELECT * INTO 
+	northeast_table
+	
+FROM
+	master_bystate_table
+	
+WHERE 
+	"State" = 'Connecticut'
+OR
+	"State" = 'Maine'
+OR
+	"State" = 'Massachusetts'
+OR
+	"State" = 'New Hampshire'
+OR
+	"State" = 'Rhode Island'
+OR
+	"State" = 'Vermont'
+OR
+	"State" = 'New Jersey'
+OR
+	"State" = 'New York'
+OR
+	"State" = 'Pennsylvania';
+
+## Midwest
+SELECT * INTO 
+	midwest_table
+	
+FROM
+	master_bystate_table
+	
+WHERE 
+	"State" = 'Indiana'
+OR
+	"State" = 'Illinois'
+OR
+	"State" = 'Michigan'
+OR
+	"State" = 'Ohio'
+OR
+	"State" = 'Wisconsin'
+OR
+	"State" = 'Iowa'
+OR
+	"State" = 'Kansas'
+OR
+	"State" = 'Minnesota'
+OR
+	"State" = 'Missouri'
+OR
+	"State" = 'Nebraska'
+OR
+	"State" = 'North Dakota'
+OR
+	"State" = 'South Dakota';
+
+## Southern table
+
+SELECT * INTO 
+	southern_table
+	
+FROM
+	master_bystate_table
+	
+WHERE 
+	"State" = 'Delaware'
+OR
+	"State" = 'District of Columbia'
+OR
+	"State" = 'Florida'
+OR
+	"State" = 'Georgia'
+OR
+	"State" = 'Maryland'
+OR
+	"State" = 'North Carolina'
+OR
+	"State" = 'South Carolina'
+OR
+	"State" = 'Virginia'
+OR
+	"State" = 'West Virginia'
+OR
+	"State" = 'Alabama'
+OR
+	"State" = 'Kentucky'
+OR
+	"State" = 'Mississippi'
+OR
+	"State" = 'Tennessee'
+OR
+	"State" = 'Arkansas'
+OR
+	"State" = 'Louisiana'
+OR
+	"State" = 'Oklahoma'
+OR
+	"State" = 'Texas';
+
+## Western region table
+
+
+SELECT * INTO 
+	western_table
+	
+FROM
+	master_bystate_table
+	
+WHERE 
+	"State" = 'Arizona'
+OR
+	"State" = 'Colorado'
+OR
+	"State" = 'Idaho'
+OR
+	"State" = 'New Mexico'
+OR
+	"State" = 'Montana'
+OR
+	"State" = 'Utah'
+OR
+	"State" = 'Nevada'
+OR
+	"State" = 'Wyoming'
+OR
+	"State" = 'Alaska'
+OR
+	"State" = 'California'
+OR
+	"State" = 'Hawaii'
+OR
+	"State" = 'Oregon'
+OR
+	"State" = 'Washington';
