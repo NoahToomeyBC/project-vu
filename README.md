@@ -64,8 +64,8 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#Data-Sources">Data Sources</a></li>
+        <li><a href="#Data-Cleaning">Data Cleaning</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
