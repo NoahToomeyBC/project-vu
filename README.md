@@ -69,12 +69,10 @@
 <br />
 <div align="center">
   <a href="https://github.com/PazilatNur/project-vu">
-    <img src="https://cdn1.onlinecounselingprograms.com/content/d58803d7d7b84778a00900d55edb0f26/9646_OCP_Managing-Your-Mental-Health-in-College-hero.jpg" alt="Logo" width="500" height="200">
+    <img src="https://cdn1.onlinecounselingprograms.com/content/d58803d7d7b84778a00900d55edb0f26/9646_OCP_Managing-Your-Mental-Health-in-College-hero.jpg" alt="Logo" width="800" height="100">
   </a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Built With
 
