@@ -1,0 +1,29 @@
+body {
+
+  color: #fcf7f78a;
+}
+.jumbotron {
+  background-image: url("../images/mental_health.jpeg");
+  background-size: 50% 110%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+#image {
+  /* the image you want to 'watermark' */
+  height: 10px; /* or whatever, equal to the image you want 'watermarked' */
+  width: 10px; /* as above */
+  background-image: url(path/to/image/to/be/watermarked.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: relative;
+  }
+  
+  #image img {
+  /* the actual 'watermark' */
+  position: absolute;
+  top: 0; /* or whatever */
+  left: 0; /* or whatever, position according to taste */
+  opacity: .09; /* Firefox, Chrome, Safari, Opera, IE >= 9 (preview) */
+  filter:alpha(opacity=50); /* for <= IE 8 */
+  }
