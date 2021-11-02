@@ -67,7 +67,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <br />
-<div align="center">
+<div align="left">
   <a href="https://github.com/PazilatNur/project-vu">
     <img src="https://cdn1.onlinecounselingprograms.com/content/d58803d7d7b84778a00900d55edb0f26/9646_OCP_Managing-Your-Mental-Health-in-College-hero.jpg" alt="Logo" width="1200" height="150">
   </a>
@@ -108,9 +108,18 @@ To get a local copy up and running follow these simple example steps.
    const API_KEY = 'ENTER YOUR API';
    ```
 
-### Data Cleaning
-Type your stuff here.
+## Data Cleaning
+ 
+### PDF Cleaning
 
+In order to get workable data, researchers used Tabula to scrape mental health demographic information from Mental Health America's State of Mental Health in America yearly reports (see below for links to relevant PDFs). Each of the tables pulled presented unique issues for data engineers to overcome. Nearly all of the tables were split in two and given repetitive, nondescript variable names. To address this, data engineers split the tables into two data-frames with matching variable names for columns and joined the two back together. Null values were handled with the ```.dropna(how='all')``` method and the population column's dtypes were changed to floats to allow for operations on them to be done in the future. Other operations done include dropping rows with bad data where strings from the description of the table had been pulled into the table itself due to an interaction between the PDFs and Tabula. Notebooks used to preform cleaning can be found in [github_link](github_link where PDF cleaning notebooks live)
+
+#### PDF Links
+* [2019 MHA PDF](https://mhanational.org/sites/default/files/2019-09/2019%20MH%20in%20America%20Final.pdf)
+* [2020 MHA PDF](https://mhanational.org/sites/default/files/State%20of%20Mental%20Health%20in%20America%20-%202020_0.pdf)
+* [2020 MHA PDF](https://mhanational.org/sites/default/files/2021%20State%20of%20Mental%20Health%20in%20America_0.pdf)
+
+  
 ## Data Visualization
 
 Type your stuff here.
