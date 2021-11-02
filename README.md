@@ -184,9 +184,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Pazi Nur - [https://github.com/github_username](https://github.com/PazilatNur)
+Noah Toomey - [https://github.com/github_username/repo_name](https://github.com/NoahToomeyBC)
+Ryan Grady -  [https://github.com/github_username](https://github.com/ryan22grady)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/KimBro763/project-vu)
+Project Link: [https://github.com/github_username/repo_name](https://github.com/PazilatNur/project-vu)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
