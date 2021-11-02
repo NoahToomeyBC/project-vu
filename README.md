@@ -68,9 +68,9 @@
         <li><a href="#Data-Cleaning">Data Cleaning</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#Data-Visualization">Data Visualization</a></li>
+    <li><a href="#Machine-Learning">Machine Learning</a></li>
+    <li><a href="#Dashboard">Dashboard</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -127,7 +127,7 @@ To get a local copy up and running follow these simple example steps.
    ```
 
 ### Data Cleaning
-
+Type your stuff here.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
