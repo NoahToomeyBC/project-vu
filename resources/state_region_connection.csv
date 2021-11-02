@@ -1,0 +1,52 @@
+﻿State,Region,Region_num
+Connecticut,Northeast,1
+Maine,Northeast,1
+Massachusetts,Northeast,1
+New Hampshire,Northeast,1
+Rhode Island,Northeast,1
+Vermont,Northeast,1
+New Jersey,Northeast,1
+New York,Northeast,1
+Pennsylvania,Northeast,1
+Illinois,Midwest,2
+Indiana,Midwest,2
+Michigan,Midwest,2
+Ohio,Midwest,2
+Wisconsin,Midwest,2
+Iowa,Midwest,2
+Kansas,Midwest,2
+Minnesota,Midwest,2
+Missouri,Midwest,2
+Nebraska,Midwest,2
+North Dakota,Midwest,2
+South Dakota,Midwest,2
+Delaware,South,3
+Florida,South,3
+Georgia,South,3
+Maryland,South,3
+North Carolina,South,3
+South Carolina,South,3
+District of Columbia,South,3
+Virginia,South,3
+West Virginia,South,3
+Alabama,South,3
+Kentucky,South,3
+Mississippi,South,3
+Tennessee,South,3
+Arkansas,South,3
+Louisiana,South,3
+Oklahoma,South,3
+Texas,South,3
+Arizona,West,4
+Colorado,West,4
+Nevada,West,4
+New Mexico,West,4
+Montana,West,4
+Utah,West,4
+Wyoming,West,4
+Alaska,West,4
+California,West,4
+Hawaii,West,4
+Oregon,West,4
+Washington,West,4
+Idaho,West,4
