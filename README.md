@@ -25,7 +25,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-<img width="699" alt="Screen Shot 2021-11-01 at 7 51 08 PM" src="https://user-images.githubusercontent.com/84995704/139769526-fa05e437-32e5-4052-9215-61dd79618495.png">
+<img width="500" alt="Screen Shot 2021-11-01 at 7 51 08 PM" src="https://user-images.githubusercontent.com/84995704/139769526-fa05e437-32e5-4052-9215-61dd79618495.png">
 
 <!-- PROJECT LOGO -->
 <br />
