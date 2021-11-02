@@ -75,9 +75,9 @@
 
 ### Built With
 
-* [Tabula](https://tabula.technology/)
-* [Pandas](https://pandas.pydata.org/)
-* [Postgresql](https://www.postgresql.org/)
+- * [Tabula](https://tabula.technology/)
+- * [Pandas](https://pandas.pydata.org/)
+- * [Postgresql](https://www.postgresql.org/)
 * [SQLAlchemy](https://www.sqlalchemy.org/)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 * [Bootstrap](https://getbootstrap.com)
@@ -148,12 +148,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<!-- CONTACT -->
 ## Contact
 
-Pazi Nur - [https://github.com/github_username](https://github.com/PazilatNur)
-Noah Toomey - [https://github.com/github_username/repo_name](https://github.com/NoahToomeyBC)
-Ryan Grady -  [https://github.com/github_username](https://github.com/ryan22grady)
+- Pazi Nur - [https://github.com/github_username](https://github.com/PazilatNur)
+- Noah Toomey - [https://github.com/github_username/repo_name](https://github.com/NoahToomeyBC)
+- Ryan Grady -  [https://github.com/github_username](https://github.com/ryan22grady)
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/PazilatNur/project-vu)
 
