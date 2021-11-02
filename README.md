@@ -1,13 +1,4 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -34,7 +25,7 @@
   </a>
 
 <h3 align="center"> Impacts of Mental Health Based on Access to Care and Employment </h3>
-
+</div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -112,12 +103,40 @@ To get a local copy up and running follow these simple example steps.
  
 ### PDF Cleaning
 
-In order to get workable data, researchers used Tabula to scrape mental health demographic information from Mental Health America's State of Mental Health in America yearly reports (see below for links to relevant PDFs). Each of the tables pulled presented unique issues for data engineers to overcome. Nearly all of the tables were split in two and given repetitive, nondescript variable names. To address this, data engineers split the tables into two data-frames with matching variable names for columns and joined the two back together. Null values were handled with the ```.dropna(how='all')``` method and the population column's dtypes were changed to floats to allow for operations on them to be done in the future. Other operations done include dropping rows with bad data where strings from the description of the table had been pulled into the table itself due to an interaction between the PDFs and Tabula. Notebooks used to preform cleaning can be found in [github_link](github_link where PDF cleaning notebooks live)
+In order to get workable data, researchers used Tabula to scrape mental health demographic information from Mental Health America's State of Mental Health in America yearly reports (see below for links to relevant PDFs). Each of the tables pulled presented unique issues for data engineers to overcome. Nearly all of the tables were split in two and given repetitive, nondescript variable names. To address this, data engineers split the tables into two data-frames with matching variable names for columns and joined the two back together. Null values were handled with the ```.dropna(how='all')``` method and the population column's dtypes were changed to floats to allow for operations on them to be done in the future. Other operations done include dropping rows with bad data where strings from the description of the table had been pulled into the table itself due to an interaction between the PDFs and Tabula.
+
+Notebooks used to preform cleaning can be found in [github_link](github_link where PDF cleaning notebooks live)
 
 #### PDF Links
 * [2019 MHA PDF](https://mhanational.org/sites/default/files/2019-09/2019%20MH%20in%20America%20Final.pdf)
 * [2020 MHA PDF](https://mhanational.org/sites/default/files/State%20of%20Mental%20Health%20in%20America%20-%202020_0.pdf)
 * [2020 MHA PDF](https://mhanational.org/sites/default/files/2021%20State%20of%20Mental%20Health%20in%20America_0.pdf)
+
+## Database Management
+
+### Data Storage
+  Our database can be accessed through a virtual server connected to Amazon Web Service's Relational Database Service. The server was then accessed through PgAdmin4 by researchers to allow for data exploration and visualization
+  
+### SQL Loader
+A [python script](https://github.com/PazilatNur/project-vu/blob/main/dataframe_sql_loader.ipynb) was created to allow for most of our cleaned CSVs to be loaded into our Postgres server at once with minimal hassle. The loader works first loading all CSV file locations into a list, the list is then further cleaned by removing all redundant or unnecessary information (ie. PDFs, no longer relevant CSVs) and then the list is loaded into a for loop that accesses file locations and turns all relevant CSVs into dataframes and appends them all to a dictionary. In order to get the file names set as the table names in postgres, the list was ran through a for loop that dropped all file extensions from the items in the list. From there, the list was then further converted into a tuple which allowed the name to be loaded into the final for loop. Next, the connection to the database was setup using a formatted db_string that was loaded as our connection engine for SQLalchemy. Finally, the for loop was created that accessed the zipped dataframes inside df_dict{} and the zipped table titles.
+
+### PGAdmin Table Explanation
+- master_bystate_table
+  - This table has all the tables joined together based on the primary key of state. This keying convention is held throughout most all tables.
+- Regional Tables: These tables are split up based on regions as described by the [United States Census Bureau](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf)
+  - northeast_table 
+  - western_table
+  - southern_table
+  - midwest_table
+ - Youth and Adult Tables
+  - Additionally, tables were split from the master_bystate_table to only include either youth or adult data.
+ - Schemas
+  - SQL Queries can be found [here](https://github.com/PazilatNur/project-vu/tree/main/sql_schema_and_misc)
+  
+ 
+  
+  
+<p align="right">(<a href="#top">back to top</a>)</p>  
 
   
 ## Data Visualization
@@ -160,9 +179,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-- Pazi Nur - [https://github.com/github_username](https://github.com/PazilatNur)
-- Noah Toomey - [https://github.com/github_username/repo_name](https://github.com/NoahToomeyBC)
-- Ryan Grady -  [https://github.com/github_username](https://github.com/ryan22grady)
+- Pazi Nur - [https://github.com/PazilatNur](https://github.com/PazilatNur)
+- Noah Toomey - [https://github.com/NoahToomeyBC](https://github.com/NoahToomeyBC)
+- Ryan Grady -  [https://github.com/ryan22grady](https://github.com/ryan22grady)
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/PazilatNur/project-vu)
 
@@ -173,7 +192,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
+* [README Template Refactored From <br> https://github.com/othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * []()
 * []()
 
@@ -183,15 +202,15 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/KimBro763/project-vu/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/PazilatNur/project-vu.svg?style=for-the-badge
+[contributors-url]: https://github.com/PazilatNur/project-vu/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/PazilatNur/project-vu.svg?style=for-the-badge
 [forks-url]: https://github.com/KimBro763/project-vu/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/PazilatNur/project-vu.svg?style=for-the-badge
 [stars-url]: https://github.com/KimBro763/project-vu/stargazers
 [issues-shield]: https://img.shields.io/github/issues/KimBro763/project-vu/.svg?style=for-the-badge
 [issues-url]: https://github.com/KimBro763/project-vu/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/PazilatNur/project-vu.svg?style=for-the-badge
 [license-url]: https://github.com/KimBro763/project-vu/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
