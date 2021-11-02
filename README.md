@@ -29,26 +29,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/KimBro763/project-vu">
-    <img src="https://user-images.githubusercontent.com/84995704/139769526-fa05e437-32e5-4052-9215-61dd79618495.png" alt="Logo" width="300" height="300">
+  <a href="https://github.com/PazilatNur/project-vu">
+    <img src="https://beingalivela.org/wp-content/uploads/2015/01/mental-health.jpg" alt="Logo" width="500" height="400">
   </a>
 
 <h3 align="center"> Impacts of Mental Health Based on Access to Care and Employment </h3>
-
-  <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
-</div>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -68,9 +53,9 @@
         <li><a href="#Data-Cleaning">Data Cleaning</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#Data-Visualization">Data Visualization</a></li>
+    <li><a href="#Machine-Learning">Machine Learning</a></li>
+    <li><a href="#Dashboard">Dashboard</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -81,13 +66,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
+<br />
+<div align="center">
+  <a href="https://github.com/PazilatNur/project-vu">
+    <img src="https://cdn1.onlinecounselingprograms.com/content/d58803d7d7b84778a00900d55edb0f26/9646_OCP_Managing-Your-Mental-Health-in-College-hero.jpg" alt="Logo" width="1200" height="150">
+  </a>
 
 
 ### Built With
@@ -100,7 +83,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -110,15 +92,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
+### Data Sources
 
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
@@ -134,14 +108,12 @@ This is an example of how to list things you need to use the software and how to
    const API_KEY = 'ENTER YOUR API';
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+### Data Cleaning
+Type your stuff here.
 
+## Data Visualization
 
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Type your stuff here.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -149,13 +121,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-<!-- ROADMAP -->
-## Roadmap
-
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
+## Machine Learning
+ 
+  Science
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
@@ -163,19 +131,9 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Dashboard
+  
+  Dashboard stuff here
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -190,12 +148,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+- Pazi Nur - [https://github.com/github_username](https://github.com/PazilatNur)
+- Noah Toomey - [https://github.com/github_username/repo_name](https://github.com/NoahToomeyBC)
+- Ryan Grady -  [https://github.com/github_username](https://github.com/ryan22grady)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/KimBro763/project-vu)
+Project Link: [https://github.com/github_username/repo_name](https://github.com/PazilatNur/project-vu)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
