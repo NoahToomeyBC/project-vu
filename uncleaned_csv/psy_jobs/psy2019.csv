@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Area Name,Employment(1),Employment percent relative standard error(3),Annual mean wage(2),"Employment per 1,000 jobs",Location Quotient
 Alabama(0100000),         840,        23.2,       67450,       0.442,        0.55
 Alaska(0200000),         230,        10.0,       81490,       0.765,        0.96
@@ -57,4 +58,65 @@ Wyoming(5600000),         200,        10.6,       78000,       0.754,        0.9
 "(3)The relative standard error (RSE) is a measure of the reliability of a survey statistic. The smaller the relative standard error, the more precise the estimate.",,,,,
 ,,,,,
 SOC code: Standard Occupational Classification code -- see http://www.bls.gov/soc/home.htm,,,,,
+=======
+﻿Area Name,Employment(1),Employment percent relative standard error(3),Annual mean wage(2),"Employment per 1,000 jobs",Location Quotient
+Alabama(0100000),         840,        23.2,       67450,       0.442,        0.55
+Alaska(0200000),         230,        10.0,       81490,       0.765,        0.96
+Arizona(0400000),        2430,         8.6,       68870,       0.855,        1.07
+Arkansas(0500000),         770,        14.9,       68470,       0.650,        0.81
+California(0600000),       17210,         5.9,      115830,       1.047,        1.31
+Colorado(0800000),        2590,         6.8,       99580,       1.004,        1.25
+Connecticut(0900000),        1540,         5.9,       93960,       0.996,        1.24
+Delaware(1000000),         570,        19.0,       80030,       1.337,        1.67
+District of Columbia(1100000),         660,        17.8,      106920,       0.956,        1.20
+Florida(1200000),        5520,         7.5,       77410,       0.654,        0.82
+Georgia(1300000),        1930,        11.2,       89660,       0.448,        0.56
+Hawaii(1500000),         410,        16.0,      110780,       0.716,        0.89
+Idaho(1600000),         370,        13.5,       69570,       0.509,        0.64
+Illinois(1700000),        5610,         7.6,       81070,       0.996,        1.25
+Indiana(1800000),        1480,         7.3,       83330,       0.508,        0.63
+Iowa(1900000),         700,         7.4,       82090,       0.475,        0.59
+Kansas(2000000),         870,         6.3,       71850,       0.650,        0.81
+Kentucky(2100000),         920,        11.0,       73190,       0.518,        0.65
+Louisiana(2200000),         270,        14.7,      109180,       0.147,        0.18
+Maine(2300000),         280,        13.7,       83560,       0.493,        0.62
+Maryland(2400000),        1980,         7.6,       83320,       0.784,        0.98
+Massachusetts(2500000),        4330,         4.5,       89170,       1.293,        1.62
+Michigan(2600000),        2580,         6.6,       88050,       0.658,        0.82
+Minnesota(2700000),        2590,         7.8,       85560,       0.957,        1.20
+Mississippi(2800000),         270,         9.2,       75000,       0.249,        0.31
+Missouri(2900000),        1710,        27.5,       91050,       0.635,        0.79
+Montana(3000000),         550,         8.1,       67120,       1.199,        1.50
+Nebraska(3100000),         730,        16.8,       68850,       0.775,        0.97
+Nevada(3200000),         440,        10.3,       90410,       0.355,        0.44
+New Hampshire(3300000),         440,        11.1,       83800,       0.707,        0.88
+New Jersey(3400000),        3580,         6.3,       99170,       0.947,        1.18
+New Mexico(3500000),         720,        10.6,       75930,       0.923,        1.15
+New York(3600000),        9900,         4.3,       97030,       1.139,        1.42
+North Carolina(3700000),        3030,         5.9,       79400,       0.706,        0.88
+North Dakota(3800000),         230,        13.9,       93250,       0.578,        0.72
+Ohio(3900000),        3940,         4.3,       77660,       0.767,        0.96
+Oklahoma(4000000),         540,        10.1,       79040,       0.345,        0.43
+Oregon(4100000),        1520,         8.8,      108000,       0.843,        1.05
+Pennsylvania(4200000),        4370,         6.5,       80670,       0.793,        0.99
+Puerto Rico(7200000),         250,         7.6,       56780,       0.309,        0.39
+Rhode Island(4400000),         560,        14.6,       84860,       1.257,        1.57
+South Carolina(4500000),        1060,         6.5,       69030,       0.525,        0.66
+South Dakota(4600000),         210,         7.4,       78110,       0.521,        0.65
+Tennessee(4700000),        1290,         7.4,       75250,       0.445,        0.56
+Texas(4800000),        8930,         3.4,       73160,       0.738,        0.92
+Utah(4900000),        1100,        10.0,       79780,       0.736,        0.92
+Vermont(5000000),         240,        10.0,       65990,       0.839,        1.05
+Virginia(5100000),        2710,         8.1,       91810,       0.731,        0.91
+Washington(5300000),        2470,        10.8,       87940,       0.773,        0.97
+West Virginia(5400000),         680,        12.2,       61230,       1.053,        1.32
+Wisconsin(5500000),        3250,         6.7,       90170,       1.199,        1.50
+Wyoming(5600000),         200,        10.6,       78000,       0.754,        0.94
+,,,,,
+(1)Estimates for detailed occupations do not sum to the totals because the totals include occupations not shown separately. Estimates do not include self-employed workers.,,,,,
+"(2)Annual wages have been calculated by multiplying the corresponding hourly wage by 2,080 hours.",,,,,
+"(3)The relative standard error (RSE) is a measure of the reliability of a survey statistic. The smaller the relative standard error, the more precise the estimate.",,,,,
+,,,,,
+SOC code: Standard Occupational Classification code -- see http://www.bls.gov/soc/home.htm,,,,,
+>>>>>>> main
 "Date extracted on :Oct 25, 2021",,,,,

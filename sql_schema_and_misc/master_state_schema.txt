@@ -1,0 +1,229 @@
+## Master By State Table
+
+SELECT * INTO master_bystate_table
+FROM adult_access2019
+LEFT JOIN adult_access2020 using("State")
+LEFT JOIN adult_access_clean2021 using("State")
+LEFT JOIN adult_suicide_clean2019 using("State")
+LEFT JOIN adult_suicide_clean2020 using("State")
+LEFT JOIN adult_suicide_clean2021 using("State")
+LEFT JOIN adult_uninsured2019 using("State")
+LEFT JOIN adult_uninsured2020 using("State")
+LEFT JOIN adult_uninsured_clean2021 using("State")
+LEFT JOIN adult_unmet_needs_clean_2019 using("State")
+LEFT JOIN adult_unmet_needs_clean_2020 using("State")
+LEFT JOIN adult_unmet_need_clean2021 using("State")
+LEFT JOIN ami_csv2019 using("State")
+LEFT JOIN ami_csv2020 using("State")
+LEFT JOIN ami_csv2021 using("State")
+LEFT JOIN children_no_mh_clean2020 using("State")
+LEFT JOIN mh_workforce_clean2020 using("State")
+LEFT JOIN mh_workforce_clean2021 using("State")
+LEFT JOIN no_doc_adult2019_clean using("State")
+LEFT JOIN no_doc_adult2020_clean using("State")
+LEFT JOIN no_doc_adult2021_clean using("State")
+LEFT JOIN youth_ami_csv_clean_2019 using("State")
+LEFT JOIN youth_ami_csv_clean_2020 using("State")
+LEFT JOIN youth_ami_clean2021 using("State")
+LEFT JOIN youth_mde_clean2019 using("State")
+LEFT JOIN youth_mde_clean2020 using ("State")
+LEFT JOIN youth_mde_clean2021 using ("State")
+LEFT JOIN youth_no_mh_service2019 using ("State")
+LEFT JOIN youth_no_mh_service2020 using ("State")
+LEFT JOIN youth_no_mh_service2021 using ("State")
+LEFT JOIN youth_some_mh_service_clean2019 using ("State")
+LEFT JOIN youth_some_mh_service_clean2020 using ("State")
+LEFT JOIN youth_some_mh_service_clean2021 using ("State")
+LEFT JOIN youth_sub_dis2019_clean using ("State");
+
+SELECT * FROM master_bystate_table;
+
+
+## Adult Table
+SELECT * INTO master_adult_table
+FROM adult_access2019
+LEFT JOIN adult_access2020 using("State")
+LEFT JOIN adult_access_clean2021 using("State")
+LEFT JOIN adult_suicide_clean2019 using("State")
+LEFT JOIN adult_suicide_clean2020 using("State")
+LEFT JOIN adult_suicide_clean2021 using("State")
+LEFT JOIN adult_uninsured2019 using("State")
+LEFT JOIN adult_uninsured2020 using("State")
+LEFT JOIN adult_uninsured_clean2021 using("State")
+LEFT JOIN adult_unmet_needs_clean_2019 using("State")
+LEFT JOIN adult_unmet_needs_clean_2020 using("State")
+LEFT JOIN adult_unmet_need_clean2021 using("State")
+LEFT JOIN ami_csv2019 using("State")
+LEFT JOIN ami_csv2020 using("State")
+LEFT JOIN ami_csv2021 using("State")
+LEFT JOIN mh_workforce_clean2020 using("State")
+LEFT JOIN mh_workforce_clean2021 using("State")
+LEFT JOIN no_doc_adult2019_clean using("State")
+LEFT JOIN no_doc_adult2020_clean using("State")
+LEFT JOIN no_doc_adult2021_clean using("State");
+
+
+SELECT * FROM master_adult_table;
+
+
+
+## Youth Table
+
+SELECT * INTO master_youth_table
+FROM children_no_mh_clean2020
+LEFT JOIN mh_workforce_clean2020 using("State")
+LEFT JOIN mh_workforce_clean2021 using("State")
+LEFT JOIN youth_ami_csv_clean_2019 using("State")
+LEFT JOIN youth_ami_csv_clean_2020 using("State")
+LEFT JOIN youth_ami_clean2021 using("State")
+LEFT JOIN youth_mde_clean2019 using("State")
+LEFT JOIN youth_mde_clean2020 using ("State")
+LEFT JOIN youth_mde_clean2021 using ("State")
+LEFT JOIN youth_no_mh_service2019 using ("State")
+LEFT JOIN youth_no_mh_service2020 using ("State")
+LEFT JOIN youth_no_mh_service2021 using ("State")
+LEFT JOIN youth_some_mh_service_clean2019 using ("State")
+LEFT JOIN youth_some_mh_service_clean2020 using ("State")
+LEFT JOIN youth_some_mh_service_clean2021 using ("State")
+LEFT JOIN youth_sub_dis2019_clean using ("State");
+
+SELECT * FROM master_youth_table;
+
+## Northeast
+SELECT * FROM master_youth_table;
+
+SELECT * INTO 
+	northeast_table
+	
+FROM
+	master_bystate_table
+	
+WHERE 
+	"State" = 'Connecticut'
+OR
+	"State" = 'Maine'
+OR
+	"State" = 'Massachusetts'
+OR
+	"State" = 'New Hampshire'
+OR
+	"State" = 'Rhode Island'
+OR
+	"State" = 'Vermont'
+OR
+	"State" = 'New Jersey'
+OR
+	"State" = 'New York'
+OR
+	"State" = 'Pennsylvania';
+
+## Midwest
+SELECT * INTO 
+	midwest_table
+	
+FROM
+	master_bystate_table
+	
+WHERE 
+	"State" = 'Indiana'
+OR
+	"State" = 'Illinois'
+OR
+	"State" = 'Michigan'
+OR
+	"State" = 'Ohio'
+OR
+	"State" = 'Wisconsin'
+OR
+	"State" = 'Iowa'
+OR
+	"State" = 'Kansas'
+OR
+	"State" = 'Minnesota'
+OR
+	"State" = 'Missouri'
+OR
+	"State" = 'Nebraska'
+OR
+	"State" = 'North Dakota'
+OR
+	"State" = 'South Dakota';
+
+## Southern table
+
+SELECT * INTO 
+	southern_table
+	
+FROM
+	master_bystate_table
+	
+WHERE 
+	"State" = 'Delaware'
+OR
+	"State" = 'District of Columbia'
+OR
+	"State" = 'Florida'
+OR
+	"State" = 'Georgia'
+OR
+	"State" = 'Maryland'
+OR
+	"State" = 'North Carolina'
+OR
+	"State" = 'South Carolina'
+OR
+	"State" = 'Virginia'
+OR
+	"State" = 'West Virginia'
+OR
+	"State" = 'Alabama'
+OR
+	"State" = 'Kentucky'
+OR
+	"State" = 'Mississippi'
+OR
+	"State" = 'Tennessee'
+OR
+	"State" = 'Arkansas'
+OR
+	"State" = 'Louisiana'
+OR
+	"State" = 'Oklahoma'
+OR
+	"State" = 'Texas';
+
+## Western region table
+
+
+SELECT * INTO 
+	western_table
+	
+FROM
+	master_bystate_table
+	
+WHERE 
+	"State" = 'Arizona'
+OR
+	"State" = 'Colorado'
+OR
+	"State" = 'Idaho'
+OR
+	"State" = 'New Mexico'
+OR
+	"State" = 'Montana'
+OR
+	"State" = 'Utah'
+OR
+	"State" = 'Nevada'
+OR
+	"State" = 'Wyoming'
+OR
+	"State" = 'Alaska'
+OR
+	"State" = 'California'
+OR
+	"State" = 'Hawaii'
+OR
+	"State" = 'Oregon'
+OR
+	"State" = 'Washington';

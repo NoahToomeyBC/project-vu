@@ -20,8 +20,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+<<<<<<< HEAD
   <a href="https://github.com/PazilatNur/project-vu">
     <img src="https://beingalivela.org/wp-content/uploads/2015/01/mental-health.jpg" alt="Logo" width="500" height="400">
+=======
+  <a href="https://github.com/KimBro763/project-vu">
+    <img src="https://user-images.githubusercontent.com/84995704/139769526-fa05e437-32e5-4052-9215-61dd79618495.png" alt="Logo" width="300" height="300">
+>>>>>>> 409fdbab1492c5952f176d04e773cb48a33f305e
   </a>
 
 <h3 align="center"> Impacts of Mental Health Based on Access to Care and Employment </h3>
@@ -183,7 +188,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 - Noah Toomey - [https://github.com/NoahToomeyBC](https://github.com/NoahToomeyBC)
 - Ryan Grady -  [https://github.com/ryan22grady](https://github.com/ryan22grady)
 
+<<<<<<< HEAD
 Project Link: [https://github.com/github_username/repo_name](https://github.com/PazilatNur/project-vu)
+=======
+Project Link: [https://github.com/github_username/repo_name](https://github.com/KimBro763/project-vu)
+>>>>>>> 409fdbab1492c5952f176d04e773cb48a33f305e
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
