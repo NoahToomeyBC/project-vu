@@ -34,12 +34,21 @@ LEFT JOIN youth_no_mh_service2021 using ("State")
 LEFT JOIN youth_some_mh_service_clean2019 using ("State")
 LEFT JOIN youth_some_mh_service_clean2020 using ("State")
 LEFT JOIN youth_some_mh_service_clean2021 using ("State")
-LEFT JOIN youth_sub_dis2019_clean using ("State");
+LEFT JOIN youth_sub_dis2019_clean using ("State")
+LEFT JOIN psy2019 using ("State")
+LEFT JOIN psy2020 using ("State")
+LEFT JOIN psyjobs2018 using ("State")
+LEFT JOIN psyjobs2019 using ("State")
+LEFT JOIN psyjobs2020 using ("State");
 
 SELECT * FROM master_bystate_table;
 
 
 ## Adult Table
+SELECT * FROM master_bystate_table;
+
+drop table master_adult_table;
+
 SELECT * INTO master_adult_table
 FROM adult_access2019
 LEFT JOIN adult_access2020 using("State")
@@ -60,7 +69,12 @@ LEFT JOIN mh_workforce_clean2020 using("State")
 LEFT JOIN mh_workforce_clean2021 using("State")
 LEFT JOIN no_doc_adult2019_clean using("State")
 LEFT JOIN no_doc_adult2020_clean using("State")
-LEFT JOIN no_doc_adult2021_clean using("State");
+LEFT JOIN no_doc_adult2021_clean using("State")
+LEFT JOIN psy2019 using ("State")
+LEFT JOIN psy2020 using ("State")
+LEFT JOIN psyjobs2018 using ("State")
+LEFT JOIN psyjobs2019 using ("State")
+LEFT JOIN psyjobs2020 using ("State");
 
 
 SELECT * FROM master_adult_table;
@@ -90,7 +104,6 @@ LEFT JOIN youth_sub_dis2019_clean using ("State");
 SELECT * FROM master_youth_table;
 
 ## Northeast
-SELECT * FROM master_youth_table;
 
 SELECT * INTO 
 	northeast_table
@@ -201,6 +214,116 @@ SELECT * INTO
 FROM
 	master_bystate_table
 	
+WHERE 
+	"State" = 'Arizona'
+OR
+	"State" = 'Colorado'
+OR
+	"State" = 'Idaho'
+OR
+	"State" = 'New Mexico'
+OR
+	"State" = 'Montana'
+OR
+	"State" = 'Utah'
+OR
+	"State" = 'Nevada'
+OR
+	"State" = 'Wyoming'
+OR
+	"State" = 'Alaska'
+OR
+	"State" = 'California'
+OR
+	"State" = 'Hawaii'
+OR
+	"State" = 'Oregon'
+OR
+	"State" = 'Washington';
+
+## Northeast Adult Table
+SELECT * INTO northeast_adult_table
+FROM master_adult_table
+WHERE 
+	"State" = 'Connecticut'
+OR
+	"State" = 'Maine'
+OR
+	"State" = 'Massachusetts'
+OR
+	"State" = 'New Hampshire'
+OR
+	"State" = 'Rhode Island'
+OR
+	"State" = 'Vermont'
+OR
+	"State" = 'New Jersey'
+OR
+	"State" = 'New York'
+OR
+	"State" = 'Pennsylvania';
+
+## Western adult Table
+SELECT * INTO western_adult_table
+FROM master_adult_table
+WHERE 
+	"State" = 'Arizona'
+OR
+	"State" = 'Colorado'
+OR
+	"State" = 'Idaho'
+OR
+	"State" = 'New Mexico'
+OR
+	"State" = 'Montana'
+OR
+	"State" = 'Utah'
+OR
+	"State" = 'Nevada'
+OR
+	"State" = 'Wyoming'
+OR
+	"State" = 'Alaska'
+OR
+	"State" = 'California'
+OR
+	"State" = 'Hawaii'
+OR
+	"State" = 'Oregon'
+OR
+	"State" = 'Washington';
+
+## Midwest Adult Table
+SELECT * INTO midwest_adult_table
+FROM master_adult_table
+WHERE 
+	"State" = 'Indiana'
+OR
+	"State" = 'Illinois'
+OR
+	"State" = 'Michigan'
+OR
+	"State" = 'Ohio'
+OR
+	"State" = 'Wisconsin'
+OR
+	"State" = 'Iowa'
+OR
+	"State" = 'Kansas'
+OR
+	"State" = 'Minnesota'
+OR
+	"State" = 'Missouri'
+OR
+	"State" = 'Nebraska'
+OR
+	"State" = 'North Dakota'
+OR
+	"State" = 'South Dakota';
+
+## Southern Adult Table
+SELECT * INTO southern_adult_table
+FROM master_adult_table
 WHERE 
 	"State" = 'Arizona'
 OR
