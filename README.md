@@ -35,10 +35,6 @@
 
 <h3 align="center"> Impacts of Mental Health Based on Access to Care and Employment </h3>
 
-  <p align="center">
-    project_description
-    <br />
- 
 
 <!-- TABLE OF CONTENTS -->
 <details>
