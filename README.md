@@ -75,9 +75,9 @@
 
 ### Built With
 
-- * [Tabula](https://tabula.technology/)
-- * [Pandas](https://pandas.pydata.org/)
-- * [Postgresql](https://www.postgresql.org/)
+* [Tabula](https://tabula.technology/)
+* [Pandas](https://pandas.pydata.org/)
+* [Postgresql](https://www.postgresql.org/)
 * [SQLAlchemy](https://www.sqlalchemy.org/)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 * [Bootstrap](https://getbootstrap.com)
