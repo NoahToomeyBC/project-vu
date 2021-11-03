@@ -164,7 +164,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
   We plan on using an html as our dashboard, which will have data visualizations, assessments, and a project summary. Our html coding is located in initial_html on the main branch of our repository.
   
-  We have a static folder that will store javascript and css code, as well as images to be used in the html. We've incorportated CSS and bootstap for styling of the html and stored the images used so far in the images folder. The image at the top of the page of the four heads was inputed using a jumbotron in css, which where the code is stored. 
+  We have a static folder that will store javascript and css code, as well as images to be used in the html. We've incorportated CSS and bootstap for styling of the html and stored the images used so far in the images folder. The image at the top of the page of the four heads was inputed using a jumbotron in css, where the code is stored. Bootstrap was incorporated for the color scheme and font styles, so far. 
   
   Next, we will decide on the layout of the html, that is, which visualizitions and interactive interfaces will be included beyond the assessment text. 
 
