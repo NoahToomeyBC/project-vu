@@ -161,8 +161,8 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 
 ## Dashboard
-  
-  Dashboard stuff here
+
+  We plan on using an html as our dashboard, which will have data visualizations, assessments, and a project summary. Our html coding is located in initial_html on the main branch of our repository.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
