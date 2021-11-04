@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <title>Mental Health in America</title>
     <link
       rel="stylesheet"
@@ -30,6 +31,7 @@
 
 </head>
 <body class="bg-info">
+    
 
     <div id="image">
         <img src="static/images/bg.png" alt="..." />
@@ -57,26 +59,62 @@
 		</div>
 	</header>
 
-    <div class="container">
+    <!-- <div class="container"> -->
         <header>
             <div class="header">
                 <h2>Purpose</h2>
                     <p> The Purpose of this analysis is to....</p>
             </div>
         </header>
+    </div>
+<!-- end of the intro parah -->
+    <div class="row">
+        <div class="col-md-6">
+            <div id="bar">Bar chart goes here </div>
 
-    
-    <div class="container">
-        <header> 
-            <div class="header">
-                <h2>Results</h2>
-                    <p> During our analysis we found...</p>
-            </div>
-        </header>               
+        </div>
+
+        <div class="col-md-6">
+            <div id="gauge"> Guage chart goes here</div>
+
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="pie"> Scatter plots here </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- this is the end of the page -->
+<!-- <div class="container">    
+    <header> 
+        <div class="header">
+            <h2>Results</h2>
+                <p> During our analysis we found...</p>
+        </div>
+    </header>     
+</div>           -->
 
 <!-- Add scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-<script src="static/js/data.js"></script>
-<script src="static/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="static/js/plots.js"></script>
 </body>
 </html>
