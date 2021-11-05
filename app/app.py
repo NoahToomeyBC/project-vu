@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 # Connect to database with flask_sqlalchemy
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
+# app.run(debug=True)
 
 
 Base = automap_base()
