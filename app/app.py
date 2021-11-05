@@ -29,7 +29,7 @@ session = Session(engine)
 
 Master = Base.classes.master_bystate_table
 
-@app.route('/viz')
+@app.route('/')
 def vis():
     try:
         labels = session.query(Master.State).all()
@@ -45,7 +45,3 @@ def vis():
 if __name__ == '__main__':
     app.run(debug=True)
 
-@app.route('/ah')
-def stuff():
-    entries = Psyjob.query.order_by(Psyjob.State.desc()).all()
-    return entries[0]
