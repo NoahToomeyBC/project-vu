@@ -152,3 +152,18 @@ CREATE TABLE adult_ami as(
 SELECT *
 from adult_ami;
 
+
+
+drop table if exists adult_master_year;
+CREATE TABLE adult_master_year as(
+SELECT *
+FROM adult_access a
+	LEFT JOIN adult_suicide s USING(state,year)
+	LEFT JOIN adult_uninsured u USING(state,year)
+	LEFT JOIN adult_unmet_need n USING(state,year)
+	LEFT JOIN adult_ami i USING(state,year) ); 
+	
+SELECT year, COUNT(*) AS cnt
+FROM adult_master_year
+GROUP BY 1;
+
