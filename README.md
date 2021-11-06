@@ -20,8 +20,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+<<<<<<< HEAD
   <a href="https://github.com/PazilatNur/project-vu">
     <img src="https://beingalivela.org/wp-content/uploads/2015/01/mental-health.jpg" alt="Logo" width="500" height="400">
+=======
+  <a href="https://github.com/KimBro763/project-vu">
+    <img src="https://user-images.githubusercontent.com/84995704/139769526-fa05e437-32e5-4052-9215-61dd79618495.png" alt="Logo" width="300" height="300">
+>>>>>>> 409fdbab1492c5952f176d04e773cb48a33f305e
   </a>
 
 <h3 align="center"> Impacts of Mental Health Based on Access to Care and Employment </h3>
@@ -128,6 +133,7 @@ A [python script](https://github.com/PazilatNur/project-vu/blob/main/dataframe_s
   - western_table
   - southern_table
   - midwest_table
+ - Adult-only version of Regional Tables
  - Youth and Adult Tables
   - Additionally, tables were split from the master_bystate_table to only include either youth or adult data.
  - Schemas
@@ -141,7 +147,7 @@ A [python script](https://github.com/PazilatNur/project-vu/blob/main/dataframe_s
   
 ## Data Visualization
 
-To be updated...
+Type your stuff here.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -161,12 +167,8 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 
 ## Dashboard
-
-  We plan on using an html as our dashboard, which will have data visualizations, assessments, and a project summary. Our html coding is located in initial_html on the main branch of our repository.
   
-  We have a static folder that will store javascript and css code, as well as images to be used in the html. We've incorportated CSS and bootstap for styling of the html and stored the images used so far in the images folder. The image at the top of the page of the four heads was inputed using a jumbotron in css, where the code is stored. Bootstrap was incorporated for the color scheme and font styles, so far. 
-  
-  Next, we will decide on the layout of the html, that is, which visualizitions and interactive interfaces will be included beyond the assessment text. 
+  Dashboard stuff here
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -187,7 +189,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 - Noah Toomey - [https://github.com/NoahToomeyBC](https://github.com/NoahToomeyBC)
 - Ryan Grady -  [https://github.com/ryan22grady](https://github.com/ryan22grady)
 
+<<<<<<< HEAD
 Project Link: [https://github.com/github_username/repo_name](https://github.com/PazilatNur/project-vu)
+=======
+Project Link: [https://github.com/github_username/repo_name](https://github.com/KimBro763/project-vu)
+>>>>>>> 409fdbab1492c5952f176d04e773cb48a33f305e
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -219,3 +225,4 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
+
