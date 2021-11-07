@@ -103,7 +103,7 @@ LEFT JOIN youth_sub_dis2019_clean using ("State");
 
 SELECT * FROM master_youth_table;
 
-drop table northeast_table;
+## Northeast
 
 SELECT * INTO 
 	northeast_table
@@ -130,8 +130,7 @@ OR
 OR
 	"State" = 'Pennsylvania';
 
-drop table midwest_table;
-
+## Midwest
 SELECT * INTO 
 	midwest_table
 	
@@ -163,7 +162,8 @@ OR
 OR
 	"State" = 'South Dakota';
 
-drop table southern_table;
+## Southern table
+
 SELECT * INTO 
 	southern_table
 	
@@ -205,8 +205,9 @@ OR
 OR
 	"State" = 'Texas';
 
+## Western region table
 
-drop table western_table;
+
 SELECT * INTO 
 	western_table
 	
@@ -240,7 +241,7 @@ OR
 OR
 	"State" = 'Washington';
 
-drop table northeast_adult_table;
+## Northeast Adult Table
 SELECT * INTO northeast_adult_table
 FROM master_adult_table
 WHERE 
@@ -262,7 +263,7 @@ OR
 OR
 	"State" = 'Pennsylvania';
 
-drop table western_adult_table;
+## Western adult Table
 SELECT * INTO western_adult_table
 FROM master_adult_table
 WHERE 
@@ -292,7 +293,7 @@ OR
 OR
 	"State" = 'Washington';
 
-drop table midwest_adult_table;
+## Midwest Adult Table
 SELECT * INTO midwest_adult_table
 FROM master_adult_table
 WHERE 
@@ -320,7 +321,7 @@ OR
 OR
 	"State" = 'South Dakota';
 
-drop table southern_adult_table;
+## Southern Adult Table
 SELECT * INTO southern_adult_table
 FROM master_adult_table
 WHERE 
