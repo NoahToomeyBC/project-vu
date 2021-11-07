@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Mental Health in America</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+        p    {color: white;}
+        h1 {color: rgb(252, 248, 248);}
+        h1 {text-align:center;}
+        h1 {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        h2 {color: rgb(252, 248, 248);}
+        h2 {text-align:left;}
+        h2 {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        h3 {color: rgb(252, 248, 248);}
+        h3 {text-align:left;}
+        h3 {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        table {color:white;}
+        a {color:white;}
+        li {color:darkblue;}
+      </style>
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body class="bg-info">
+    
+
+    <div id="image">
+        <img src="static/images/bg.png" alt="..." />
+    </div>
+    
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-info bg-info navbar-expand-lg"></nav>
+              <a class="navbar-brand" href="www.mhanational.org">mhanational.org</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a href="index.html"><img src="static/images/MH.png" alt="www.mhanational.org" width="45" height="auto"></a>
+        </nav>
+    </div>
+    
+    <div class="jumbotron">
+
+    </div>
+
+    <div class="container-fluid">
+        <header>
+            <div class="header">
+                <h1>Mental Health In America</h1>
+            </div>
+        </header>
+        <div class="col-md-4">
+            <h3>Purpose <small>Help Authority to make better decision etc</small></h3>
+        </div>
+        <div class="col-md-8 center">
+            <p>Are we alone in the universe? For millennia, humans have turned to the sky to answer this question. Now, thanks to research generously funded by W. Avy, a UFO-enthusiast and amateur ufologist, we can supplement our sky-searching with data analysis.
+
+                "The release of this analysis is well-timed: It coincides with the celebration of World UFO Day, which is a moment for ufologists around the world to connect, relax, and sample a range of UFO-themed snacks," said Dr. Ursula F. Olivier, the world's preeminent expert on circular sightings. "Citizen-scientists can be especially helpful in both cataloguing sightings—which is hugely helpful for us in our search for aliens—and in helping us celebrate the work that has already been done, such as this data visualization project, which will help us raise awareness of the ubiquity of sightings!"
+                
+                Not everyone is ready to celebrate, however. Local CEO and vocal anti-alien activist V. Isualize reached out to our reporters to go on record as firmly opposed to any attempts to provide access to this data. "If there are aliens, they certainly would like to be left alone," she stated, before directing us to the Leave Aliens Alone (LAA) community engagement initiative she founded and funds.
+                
+                So what do YOU think? Are we alone in the universe? Are aliens trying to contact us, or do they want to be left alone? Dig through the data yourself, and let us know what you see. BLA BLA BLA
+            </p>
+        </div>
+        <!-- <header>
+            <div class="header">
+                <h2>Purpose</h2>
+                    <p> The Purpose of this analysis is to....</p>
+            </div>
+        </header> -->
+    </div>
+<!-- end of the intro parah -->
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <form >
+            <p>Filter Search</p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <label for="state">Select State</label><br>
+                <input type="text" placeholder="ca" id="state"/>
+            </li>
+            <li class="list-group-item">
+                <label for="city">Select Year</label><br>
+                <input type="text" placeholder="la mesa" id="city"/>
+            </li>
+            <li class="list-group-item">
+                <label for="city">Select Placeholder</label><br>
+                <input type="text" placeholder="BALHHH" id="city"/>
+            </li>
+            <!-- <li class="list-group-item bg-dark">
+                <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button> 
+            </li> -->
+
+        </ul>
+
+      </div>
+
+      <div class="col-md-2">
+      </div>
+
+      <div class="col-md-7">
+        <table class="table table-striped">
+
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>AMI</th>
+                <th>Unmet Need</th>
+                <th>Suicide</th>
+              </tr>
+            </thead>
+
+
+            <tbody></tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+
+<!-- building data related charts here -->
+    <div class="row">
+        <div class="col-md-6">
+          <div id="bar"></div>
+        </div>
+        <div class="col-md-6">
+          <div id="pie"></div>
+        </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- this is the end of the page -->
+<div class="container">    
+    <header> 
+        <div class="header">
+            <h2>Results</h2>
+                <p> During our analysis we found..e alone in the universe? For millennia, humans have turned to the sky to answer this question. Now, thanks to research generously funded by W. Avy, a UFO-enthusiast and amateur ufologist, we can supplement our sky-searching with data analysis.
+
+                    "The release of this analysis is well-timed: It coincides with the celebration of World UFO Day, which is a moment for ufologists around the world to connect, relax, and sample a range of UFO-themed snacks," said Dr. Ursula F. Olivier, the world's preeminent expert on circular sightings. "Citizen-scientists can be especially helpful in both cataloguing sightings—which is hugely helpful for us in our search for aliens—and in helping us celebrate the work that has already been done, such as this data visualization project, which will help us raise awareness of the ubiquity of sightings!"
+                    
+                    Not everyone is ready to celebrate, however. Local CEO and vocal anti-alien activist V. Isualize reached out to our reporters to go on record as firmly opposed to any attempts to provide access to this data. "If there are aliens, they certainly would like to be left alone," she stated, before directing us to the Leave Aliens Alone (LAA) community engagement initiative she founded and funds.
+                    .</p>
+        </div>
+    </header>     
+</div>          
+
+<!-- Add scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <!-- <script src="static/js/app.js"></script> -->
+    <script src="static/js/plots.js"></script>
+</body>
+</html>

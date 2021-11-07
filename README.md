@@ -108,7 +108,7 @@ To get a local copy up and running follow these simple example steps.
  
 ### PDF Cleaning
 
-In order to get workable data, researchers used Tabula to scrape mental health demographic information from Mental Health America's State of Mental Health in America yearly reports (see below for links to relevant PDFs). Each of the tables pulled presented unique issues for data engineers to overcome. Nearly all of the tables were split in two and given repetitive, nondescript variable names. To address this, data engineers split the tables into two data-frames with matching variable names for columns and joined the two back together. Null values were handled with the ```.dropna(how='all')``` method and the population column's dtypes were changed to floats to allow for operations on them to be done in the future. Other operations done include dropping rows with bad data where strings from the description of the table had been pulled into the table itself due to an interaction between the PDFs and Tabula.
+In order to get workable data, researchers used Tabula to scrape mental health demographic information from Mental Health America's State of Mental Health in America yearly reports (see below for links to relevant PDFs). Each of the tables pulled presented unique issues for data engineers to overcome. Nearly all of the tables were split in two and given repetitive, nondescript variable names. To address this, data engineers split the tables into two data-frames with matching variable names for columns and joined the two back together. Null values were handled with the ```.dropna(how='all')``` method for data that doesn't add value and the population column's dtypes were changed to floats to allow for operations on them to be done in the future. Other operations done include dropping rows with bad data where strings from the description of the table had been pulled into the table itself due to an interaction between the PDFs and Tabula.
 
 Notebooks used to preform cleaning can be found in [github_link](github_link where PDF cleaning notebooks live)
 
@@ -116,6 +116,12 @@ Notebooks used to preform cleaning can be found in [github_link](github_link whe
 * [2019 MHA PDF](https://mhanational.org/sites/default/files/2019-09/2019%20MH%20in%20America%20Final.pdf)
 * [2020 MHA PDF](https://mhanational.org/sites/default/files/State%20of%20Mental%20Health%20in%20America%20-%202020_0.pdf)
 * [2020 MHA PDF](https://mhanational.org/sites/default/files/2021%20State%20of%20Mental%20Health%20in%20America_0.pdf)
+
+
+We have also pulled data from NHIS. The target population for the NHIS is the civilian noninstitutionalized population residing within 
+the 50 states and the District of Columbia at the time of the interview.the sample is expected to yield 30,000 sample adult completed interviews. Data cleaning for for this part includes decoding the survery documentationa and extract the data that is valuable to our project. Then, we created state_region data to link this regionl data with other state level data by aggregating the part that we used in our ML process. 
+#### Links to public data that's been applied to our project 
+* [NHIS](https://www.cdc.gov/nchs/nhis/2020nhis.html)
 
 ## Database Management
 
@@ -133,7 +139,8 @@ A [python script](https://github.com/PazilatNur/project-vu/blob/main/dataframe_s
   - western_table
   - southern_table
   - midwest_table
- - Adult-only version of Regional Tables
+ - Adult-master-year Table:
+  - This table includes all of our collected adult_mental_health data with additional year column. 
  - Youth and Adult Tables
   - Additionally, tables were split from the master_bystate_table to only include either youth or adult data.
  - Schemas
@@ -225,3 +232,4 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
+
