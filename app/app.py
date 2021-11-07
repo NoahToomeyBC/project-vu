@@ -29,14 +29,26 @@ session = Session(engine)
 
 Master = Base.classes.master_bystate_table
 
+
 @app.route('/')
 def index():
+    try:
+        return render_template(index.html)
+    except Exception as e:
+    # e holds description of the error
+        error_text = "<p>The error:<br>" + str(e) + "</p>"
+        hed = '<h1>Something is broken.
+        return hed + error_text
+
+
+@app.route('/test')
+def test():
     try:
         labels = session.query(Master.State).all()
         label = list(np.ravel(labels))
         values = session.query(Master.Rank_adult_access_2019).all()
         value = list(np.ravel(values))
-        return render_template("index.html", labels = label, values = value)
+        return render_template("test.html", labels = label, values = value)
     except Exception as e:
         # e holds description of the error
         error_text = "<p>The error:<br>" + str(e) + "</p>"
