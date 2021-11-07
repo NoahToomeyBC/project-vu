@@ -11,9 +11,8 @@ from sqlalchemy.orm import Session
 # Connect to database with flask_sqlalchemy
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 # app.run(debug=True)
-
-
 Base = automap_base()
 
 # engine, suppose it has two tables 'user' and 'address' set up
@@ -25,22 +24,24 @@ Base.prepare(engine, reflect=True)
 
 session = Session(engine)
 
-#routes
-
+#This is where table classes are set up to make calling postgres DB easier
 Master = Base.classes.master_bystate_table
 
+#Routes
 
+# Home Page Route
 @app.route('/')
 def index():
     try:
         return render_template("index.html")
+    # This except block returns errors in html when page is loaded
     except Exception as e:
     # e holds description of the error
         error_text = "<p>The error:<br>" + str(e) + "</p>"
         hed = '<h1>Something is broken.'
         return hed + error_text
 
-
+# Testing route, probably bar charts
 @app.route('/test')
 def test():
     try:
@@ -49,6 +50,23 @@ def test():
         values = session.query(Master.Rank_adult_access_2019).all()
         value = list(np.ravel(values))
         return render_template("test.html", labels = label, values = value)
+    # This except block returns errors in html when page is loaded
+    except Exception as e:
+        # e holds description of the error
+        error_text = "<p>The error:<br>" + str(e) + "</p>"
+        hed = '<h1>Something is broken.</h1>'
+        return hed + error_text
+
+# Leaflet/maps chart
+@app.route('/maps')
+def maps():
+    try:
+        stuff = session.query(Master.State).all()
+        label = list(np.ravel(stuff))
+        things = session.query(Master.Rank_adult_access_2019).all()
+        value = list(np.ravel(things))
+        return render_template("maps.html", labels = label, values = value)
+    # This except block returns errors in html when page is loaded
     except Exception as e:
         # e holds description of the error
         error_text = "<p>The error:<br>" + str(e) + "</p>"
@@ -56,4 +74,3 @@ def test():
         return hed + error_text
 if __name__ == '__main__':
     app.run(debug=True)
-
