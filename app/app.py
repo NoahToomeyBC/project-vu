@@ -33,7 +33,7 @@ Master = Base.classes.master_bystate_table
 @app.route('/')
 def index():
     try:
-        return render_template(index.html)
+        return render_template("index.html")
     except Exception as e:
     # e holds description of the error
         error_text = "<p>The error:<br>" + str(e) + "</p>"
