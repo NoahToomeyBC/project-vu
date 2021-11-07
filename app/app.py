@@ -37,7 +37,7 @@ def index():
     except Exception as e:
     # e holds description of the error
         error_text = "<p>The error:<br>" + str(e) + "</p>"
-        hed = '<h1>Something is broken.
+        hed = '<h1>Something is broken.'
         return hed + error_text
 
 
