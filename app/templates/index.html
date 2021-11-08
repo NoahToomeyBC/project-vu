@@ -15,6 +15,8 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="icon" type="image/png" href="../static/images/favicon-32x32.png" sizes="32x32" />
+
     <style>
         p  {color: white;}
         p  {text-align: center;}
@@ -127,54 +129,32 @@
       <div class="col-md-2">
       </div>
 
-      <div class="col-md-7" >
-        <table class="table table-striped", id = "homeTable">
+      <h2>Master Table</h2>
 
-            <thead>
-              <tr>
-                <th>Year</th>
-                <th>AMI</th>
-                <th>Unmet Need</th>
-                <th>Suicide</th>
-              </tr>
-            </thead>
-
-
-            <tbody></tbody>
-
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th>State</th>
+              <th>Rank Adult Access 2019</th>
+            </tr>
+          </thead>
+          <tbody>
+             {% for item in master | safe %}
+                 <tr>
+                   <td>{{item.State | safe}}</td>
+                   <td>{{item.Rank_adult_access_2019| safe}}</td>
+      
+                 </tr>
+              {% endfor %}
+         </tbody>
+      
         </table>
-
+      
       </div>
-
-    </div>
-
-
-<!-- building data related charts here -->
-    <div class="row">
-        <div class="col-md-6">
-          <div id="bar"></div>
-        </div>
-        <div class="col-md-6">
-          <div id="pie"></div>
-        </div>
+      
+      
       </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- this is the end of the page -->
 <div class="container">    

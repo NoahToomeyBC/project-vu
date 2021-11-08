@@ -21,7 +21,6 @@ engine = create_engine("postgresql://postgres:piechartspassword@project-vu-datab
 # reflect the tables
 Base.prepare(engine, reflect=True)
 
-
 session = Session(engine)
 
 #This is where table classes are set up to make calling postgres DB easier
@@ -33,7 +32,8 @@ Master = Base.classes.master_bystate_table
 @app.route('/')
 def index():
     try:
-        return render_template("index.html")
+        master = session.query(Master).all()
+        return render_template("index.html", master=master)
     # This except block returns errors in html when page is loaded
     except Exception as e:
     # e holds description of the error
