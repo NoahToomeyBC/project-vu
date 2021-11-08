@@ -6,3 +6,53 @@ body,
   padding: 0;
   margin: 0;
 }
+
+#searchButton{
+  color:white;
+}
+
+.jumbotron {
+  /* Image in the center of container */
+  background-position: center center;
+  height: 300px;
+}
+
+#mapJumbotron {
+  background-position: center center;
+  height: 200px;
+}
+
+#navbarWrapper{
+  margin: auto;
+  width: 100%;
+  height: 100;
+  color:darkblue;
+}
+#homeTable{
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+#purposeHead {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+#purposeBody {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#topHeader {
+  padding:20px;
+}
+
+#headImage{
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}

@@ -42,14 +42,14 @@ def index():
         return hed + error_text
 
 # Testing route, probably bar charts
-@app.route('/test')
-def test():
+@app.route('/tables')
+def tables():
     try:
         labels = session.query(Master.State).all()
         label = list(np.ravel(labels))
         values = session.query(Master.Rank_adult_access_2019).all()
         value = list(np.ravel(values))
-        return render_template("test.html", labels = label, values = value)
+        return render_template("tables.html", labels = label, values = value)
     # This except block returns errors in html when page is loaded
     except Exception as e:
         # e holds description of the error
@@ -72,5 +72,20 @@ def maps():
         error_text = "<p>The error:<br>" + str(e) + "</p>"
         hed = '<h1>Something is broken.</h1>'
         return hed + error_text
+@app.route('/machine-learning')
+def machinelearn():
+    try:
+        return render_template("machine_learning.html")
+    # This except block returns errors in html when page is loaded
+    except Exception as e:
+        # e holds description of the error
+        error_text = "<p>The error:<br>" + str(e) + "</p>"
+        hed = '<h1>Something is broken.</h1>'
+        return hed + error_text
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+

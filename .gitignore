@@ -7,7 +7,9 @@ __pycache__/
 *.so
 
 # Adding config.py file.
-**/config.py*
+**/config.py
+
+config.js
 
 # Distribution / packaging
 .Python
