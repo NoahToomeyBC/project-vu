@@ -5,8 +5,9 @@ import os
 from sqlalchemy import create_engine, Table, MetaData
 from sqlalchemy.ext.automap import automap_base
 import numpy as np
-from flask import Flask, render_template, url_for, redirect,flash, get_flashed_messages, jsonify
+from flask import Flask, render_template, url_for, redirect,flash, get_flashed_messages, jsonify, request
 import json
+import pandas as pd
 from sqlalchemy.orm import Session
 from flask import Flask
 
@@ -27,18 +28,15 @@ session = Session(engine)
 
 #This is where table classes are set up to make calling postgres DB easier
 Master = Base.classes.adult_master_year
-
+master_df = pd.read_sql_query('select * from "adult_master_year"',con=engine)
 #Routes
 
 # Home Page Route
 @app.route('/')
 def index():
     try:
-        results = session.query(Master).all()
-        # print(results)
-        session.close()
-        # processing the results
-        return render_template("index.html", master=results)
+        data = master_df.to_dict('records')
+        return render_template('index.html', tableA = data)
     # This except block returns errors in html when page is loaded
     except Exception as e:
     # e holds description of the error

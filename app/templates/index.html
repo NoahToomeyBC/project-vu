@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">  
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/extensions/filter-control/bootstrap-table-filter-control.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -24,10 +27,10 @@
         h1 {text-align:center;}
         h1 {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
         h2 {color: rgb(252, 248, 248);}
-        h2 {text-align:left;}
+        h2 {text-align:center;}
         h2 {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
         h3 {color: rgb(252, 248, 248);}
-        h3 {text-align:left;}
+        h3 {text-align:center;}
         h3 {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
         table {color:white;}
         a {color:white;}
@@ -55,7 +58,7 @@
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                   <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle bg-success" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       Navigate
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -93,70 +96,85 @@
                 So what do YOU think? Are we alone in the universe? Are aliens trying to contact us, or do they want to be left alone? Dig through the data yourself, and let us know what you see. BLA BLA BLA
             </p>
         </div>
-        <!-- <header>
-            <div class="header">
-                <h2>Purpose</h2>
-                    <p> The Purpose of this analysis is to....</p>
-            </div>
-        </header> -->
+
     </div>
 <!-- end of the intro parah -->
 <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-3">
-        <form >
-            <p>Filter Search</p>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <label for="state">Select State</label><br>
-                <input type="text" placeholder="ca" id="state"/>
-            </li>
-            <li class="list-group-item">
-                <label for="city">Select Year</label><br>
-                <input type="text" placeholder="la mesa" id="city"/>
-            </li>
-            <li class="list-group-item">
-                <label for="city">Select Placeholder</label><br>
-                <input type="text" placeholder="BALHHH" id="city"/>
-            </li>
-            <!-- <li class="list-group-item bg-dark">
-                <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button> 
-            </li> -->
 
-        </ul>
+      <div class="col-md-12 center" id="purposeHead">
+        <h3>Master Table <small><br>Use this table to filter our dataset!</small></h3>
 
-      </div>
+      <div class="container">
+        <table id="table"
+            triggerSearch="true"
+            data-toggle="table"
+            data-filter-control="true"
+            data-show-search-clear-button="true"
+            data-sortable="true"
+            classes="table-sm"
+            data-pagination="true"
+            data-show-columns="true"
+            data-show-columns-toggle-all="true"
+            class="table-responsive">
+            <thead>
+                <tr>
+                    <!--special characters and spaces not allowed in data-field name-->
+                    <th data-field="state" data-filter-control="input" data-sortable="true">State</th>
+                    <th data-field="year" data-filter-control="select" data-sortable="true">Year</th>
+                    <th data-field="rank_adult_ami" data-filter-control="input" data-sortable="true">Rank Adult All Mental Illnesses</th>
+                    <th data-field="percent_adult_ami" data-filter-control="input" data-sortable="true">Percent Adult All Mental Illnesses</th>
+                    <th data-field="pop_adult_ami" data-filter-control="input" data-sortable="true">Population Adult All Mental Illnesses</th>
+                    <th data-field="rank_adult_access" data-filter-control="input" data-sortable="true">Rank Adult Access</th>
+                    <th data-field="percent_adult_access" data-filter-control="input" data-sortable="true">Percent Adult Access</th>
+                    <th data-field="pop_adult_access" data-filter-control="input" data-sortable="true">Population Adult Access</th>
+                    <th data-field="rank_adult_suicide" data-filter-control="input" data-sortable="true">Rank Adult Suicide</th>
+                    <th data-field="percent_adult_suicide" data-filter-control="input" data-sortable="true">Percent Adult Suicide</th>
+                    <th data-field="pop_adult_suicide" data-filter-control="input" data-sortable="true">Population Adult Suicide</th>
+                    <th data-field="rank_adult_uninsured" data-filter-control="input" data-sortable="true">Rank Adult Uninsured</th>
+                    <th data-field="percent_adult_uninsured" data-filter-control="input" data-sortable="true">Percent Adult Uninsured</th>
+                    <th data-field="pop_adult_uninsured" data-filter-control="input" data-sortable="true">Population Adult Uninsured</th>
+                    <th data-field="rank_adult_adult_unmet_need" data-filter-control="input" data-sortable="true">Rank Adult With Unmet Needs</th>
+                    <th data-field="percent_adult_adult_unmet_need" data-filter-control="input" data-sortable="true">Percent Adult With Unmet Needs</th>
+                    <th data-field="pop_adult_adult_unmet_need" data-filter-control="input" data-sortable="true">Population Adult With Unmet Needs</th>
 
-      <div class="col-md-2">
-      </div>
-
-      <h2>Master Table</h2>
-
-      <div class="table-responsive">
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th>State</th>
-              <th>Rank Adult Access 2019</th>
-            </tr>
-          </thead>
-          <tbody>
-             {% for item in master | safe %}
-                 <tr>
-                   <td>{{item.state | safe}}</td>
-                   <td>{{item.percent_adult_access| safe}}</td>
-      
-                 </tr>
-              {% endfor %}
-         </tbody>
-      
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in tableA %}
+                <tr>
+                    <!--special characters and spaces not allowed in data-field name-->
+                    <td>{{ row.state }}</td>
+                    <td>{{ row.year }}</td>
+                    <td>{{ row.rank_adult_ami }}</td>
+                    <td>{{ row.percent_adult_ami}}</td>
+                    <td>{{ row.pop_adult_ami}}</td>
+                    <td>{{ row.rank_adult_access }}</td>
+                    <td>{{ row.percent_adult_access}}</td>
+                    <td>{{ row.pop_adult_access}}</td>
+                    <td>{{ row.rank_adult_suicide }}</td>
+                    <td>{{ row.percent_adult_suicide }}</td>
+                    <td>{{ row.pop_adult_suicide }}</td>
+                    <td>{{ row.rank_adult_uninsured }}</td>
+                    <td>{{ row.percent_adult_uninsured }}</td>
+                    <td>{{ row.pop_adult_uninsured }}</td>
+                    <td>{{ row.rank_adult_unmet_need}}</td>
+                    <td>{{ row.percent_adult_unmet_need }}</td>
+                    <td>{{ row.pop_adult_unmet_need }}</td>
+                      
+                </tr>
+                {% endfor %}
+            </tbody>
         </table>
-      
       </div>
       
       
       </div>
+<br><br>
+<div class="container">
+  <div class="col-md-12 center" id="purposeHead">
+    <h3>Master Table <small><br>Use this table to filter our dataset!</small></h3>
 
+</div>
 <!-- this is the end of the page -->
 <div class="container">    
     <header> 
@@ -172,7 +190,18 @@
     </header>     
 </div>          
 
+
+
+
+
+
+
 <!-- Add scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
     <script src="static/js/data.js"></script>
     <!-- <script src="static/js/app.js"></script> -->
