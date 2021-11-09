@@ -6,12 +6,14 @@ from sqlalchemy import create_engine, Table, MetaData
 from sqlalchemy.ext.automap import automap_base
 import numpy as np
 from flask import Flask, render_template, url_for, redirect,flash, get_flashed_messages, jsonify
+import json
 from sqlalchemy.orm import Session
+from flask import Flask
 
 # Connect to database with flask_sqlalchemy
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
+app.config['SQL_DATABASE_URI'] = "postgresql://postgres:piechartspassword@project-vu-database-piecharts.c7rvpt2rehpr.us-east-2.rds.amazonaws.com:5432/project_db"
 # app.run(debug=True)
 Base = automap_base()
 
@@ -24,7 +26,7 @@ Base.prepare(engine, reflect=True)
 session = Session(engine)
 
 #This is where table classes are set up to make calling postgres DB easier
-Master = Base.classes.master_bystate_table
+Master = Base.classes.adult_master_year
 
 #Routes
 
@@ -32,8 +34,11 @@ Master = Base.classes.master_bystate_table
 @app.route('/')
 def index():
     try:
-        master = session.query(Master).all()
-        return render_template("index.html", master=master)
+        results = session.query(Master).all()
+        # print(results)
+        session.close()
+        # processing the results
+        return render_template("index.html", master=results)
     # This except block returns errors in html when page is loaded
     except Exception as e:
     # e holds description of the error
@@ -45,9 +50,9 @@ def index():
 @app.route('/tables')
 def tables():
     try:
-        labels = session.query(Master.State).all()
+        labels = session.query(Master.state).all()
         label = list(np.ravel(labels))
-        values = session.query(Master.Rank_adult_access_2019).all()
+        values = session.query(Master.percent_adult_access).all()
         value = list(np.ravel(values))
         return render_template("tables.html", labels = label, values = value)
     # This except block returns errors in html when page is loaded
@@ -61,9 +66,9 @@ def tables():
 @app.route('/maps')
 def maps():
     try:
-        stuff = session.query(Master.State).all()
+        stuff = session.query(Master.state).all()
         label = list(np.ravel(stuff))
-        things = session.query(Master.Rank_adult_access_2019).all()
+        things = session.query(Master.percent_adult_access).all()
         value = list(np.ravel(things))
         return render_template("maps.html", labels = label, values = value)
     # This except block returns errors in html when page is loaded

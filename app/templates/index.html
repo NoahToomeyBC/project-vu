@@ -83,6 +83,7 @@
             <h3>Purpose <small>Help Authority to make better decision etc</small></h3>
         </div>
         <div class="col-md-8 center" id="purposeBody">
+            {{master}}
             <p>Are we alone in the universe? For millennia, humans have turned to the sky to answer this question. Now, thanks to research generously funded by W. Avy, a UFO-enthusiast and amateur ufologist, we can supplement our sky-searching with data analysis.
 
                 "The release of this analysis is well-timed: It coincides with the celebration of World UFO Day, which is a moment for ufologists around the world to connect, relax, and sample a range of UFO-themed snacks," said Dr. Ursula F. Olivier, the world's preeminent expert on circular sightings. "Citizen-scientists can be especially helpful in both cataloguing sightings—which is hugely helpful for us in our search for aliens—and in helping us celebrate the work that has already been done, such as this data visualization project, which will help us raise awareness of the ubiquity of sightings!"
@@ -142,8 +143,8 @@
           <tbody>
              {% for item in master | safe %}
                  <tr>
-                   <td>{{item.State | safe}}</td>
-                   <td>{{item.Rank_adult_access_2019| safe}}</td>
+                   <td>{{item.state | safe}}</td>
+                   <td>{{item.percent_adult_access| safe}}</td>
       
                  </tr>
               {% endfor %}
