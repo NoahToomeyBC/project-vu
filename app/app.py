@@ -59,21 +59,65 @@ def tables():
         error_text = "<p>The error:<br>" + str(e) + "</p>"
         hed = '<h1>Something is broken.</h1>'
         return hed + error_text
-@app.route('/test')
-def test_map():
-    return ("test.html")
 
 # Leaflet/maps chart
-@app.route('/maps')
+@app.route('/map-ami')
 def maps():
     try:
-        return render_template("maps.html")
+        return render_template("map_ami.html")
     # This except block returns errors in html when page is loaded
     except Exception as e:
         # e holds description of the error
         error_text = "<p>The error:<br>" + str(e) + "</p>"
         hed = '<h1>Something is broken.</h1>'
         return hed + error_text
+
+@app.route('/map-access')
+def maps():
+    try:
+        return render_template("map_access.html")
+    # This except block returns errors in html when page is loaded
+    except Exception as e:
+        # e holds description of the error
+        error_text = "<p>The error:<br>" + str(e) + "</p>"
+        hed = '<h1>Something is broken.</h1>'
+        return hed + error_text
+
+@app.route('/map-unmet-needs')
+def maps():
+    try:
+        return render_template("map_unmet_needs.html")
+    # This except block returns errors in html when page is loaded
+    except Exception as e:
+        # e holds description of the error
+        error_text = "<p>The error:<br>" + str(e) + "</p>"
+        hed = '<h1>Something is broken.</h1>'
+        return hed + error_text
+
+@app.route('/map-untreated-disability')
+def maps():
+    try:
+        return render_template("map_untreated_disability.html")
+    # This except block returns errors in html when page is loaded
+    except Exception as e:
+        # e holds description of the error
+        error_text = "<p>The error:<br>" + str(e) + "</p>"
+        hed = '<h1>Something is broken.</h1>'
+        return hed + error_text
+
+
+@app.route('/map-suicidal-ideation')
+def maps():
+    try:
+        return render_template("map_suicide.html")
+    # This except block returns errors in html when page is loaded
+    except Exception as e:
+        # e holds description of the error
+        error_text = "<p>The error:<br>" + str(e) + "</p>"
+        hed = '<h1>Something is broken.</h1>'
+        return hed + error_text
+
+# Machine learning route
 @app.route('/machine-learning')
 def machinelearn():
     try:
