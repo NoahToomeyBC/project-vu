@@ -62,7 +62,7 @@ def tables():
 
 # Leaflet/maps chart
 @app.route('/map-ami')
-def maps():
+def map_ami():
     try:
         return render_template("map_ami.html")
     # This except block returns errors in html when page is loaded
@@ -73,7 +73,7 @@ def maps():
         return hed + error_text
 
 @app.route('/map-access')
-def maps():
+def map_access():
     try:
         return render_template("map_access.html")
     # This except block returns errors in html when page is loaded
@@ -84,7 +84,7 @@ def maps():
         return hed + error_text
 
 @app.route('/map-unmet-needs')
-def maps():
+def map_unmet():
     try:
         return render_template("map_unmet_needs.html")
     # This except block returns errors in html when page is loaded
@@ -95,7 +95,7 @@ def maps():
         return hed + error_text
 
 @app.route('/map-untreated-disability')
-def maps():
+def map_untreated():
     try:
         return render_template("map_untreated_disability.html")
     # This except block returns errors in html when page is loaded
@@ -107,7 +107,7 @@ def maps():
 
 
 @app.route('/map-suicidal-ideation')
-def maps():
+def map_suicide():
     try:
         return render_template("map_suicide.html")
     # This except block returns errors in html when page is loaded
