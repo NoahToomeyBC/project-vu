@@ -59,16 +59,15 @@ def tables():
         error_text = "<p>The error:<br>" + str(e) + "</p>"
         hed = '<h1>Something is broken.</h1>'
         return hed + error_text
+@app.route('/test')
+def test_map():
+    return ("test.html")
 
 # Leaflet/maps chart
 @app.route('/maps')
 def maps():
     try:
-        stuff = session.query(Master.state).all()
-        label = list(np.ravel(stuff))
-        things = session.query(Master.percent_adult_access).all()
-        value = list(np.ravel(things))
-        return render_template("maps.html", labels = label, values = value)
+        return render_template("maps.html")
     # This except block returns errors in html when page is loaded
     except Exception as e:
         # e holds description of the error
