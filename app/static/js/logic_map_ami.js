@@ -277,6 +277,7 @@ $.getJSON(link,function(data){
      
     });
 
+
     $.getJSON("https://raw.githubusercontent.com/NoahToomeyBC/project-vu/main/app/static/unemployment_2019.geojson",function(data){    
       function style(feature) {
         return {
@@ -334,10 +335,10 @@ $.getJSON(link,function(data){
             // This function determines the color of the marker based on the magnitude of the earthquake.
             function getColor(percentage) {
               if (percentage > .975) {
-                return "#045a8d";
+                return "#023858";
               }
               if (percentage > .97) {
-                return "#3690c0";
+                return "#045a8d";
               }
               if (percentage > .96) {
                 return "#74a9cf";
@@ -355,12 +356,13 @@ $.getJSON(link,function(data){
                 return "238b45";
               }
               if (percentage > .85) {
-                return "ece7f2";
+                return "#013220";
               }
               return "006d2c";
 
             }
       }
+
       L.geoJson(data, {style: style}).addTo(employment2020);
     });    
     
@@ -385,6 +387,7 @@ $.getJSON(link,function(data){
               if (percentage > .965) {
                 return "#0570b0";
               }
+              
               if (percentage > .96) {
                 return "#3690c0";
               }
@@ -395,18 +398,97 @@ $.getJSON(link,function(data){
                 return "#a6bddb";
               }
               if (percentage > .945) {
-                return "d0d1e6";
+                return "#d0d1e6";
               }
               if (percentage > .94) {
-                return "ece7f2";
+                return "#ece7f2";
               }
-              return "fff7fb";
+              return "#fff7fb";
 
             }
       }
       L.geoJson(data, {style: style}).addTo(employment2021);
     });
 
+  // Here we create a legend control object.
+  let legend = L.control({
+    position: "bottomright"
+  });
+  
+  // Then add all the details for the legend
+  legend.onAdd = function() {
+    let div = L.DomUtil.create("div", "info legend");
+    labels = ['<strong>Percentage</strong>'];
+
+  
+    const percentage = [0,16,18,20,22,24];
+    const colors = [
+      "#98ee00",
+      "#d4ee00",
+      "#eecc00",
+      "#ee9c00",
+      "#ea822c",
+      "#ea2c2c"
+    ];
+  
+  // Looping through our intervals to generate a label with a colored square for each interval.
+    for (var i = 0; i < percentage.length; i++) {
+      console.log(colors[i]);
+      div.innerHTML +=
+      labels.push(
+        "<i style='background: " + colors[i] + "'></i> " +
+        percentage[i] + (percentage[i + 1] ? "&ndash;" + percentage[i + 1] + "<br>" : "+"));
+      }
+      div.innerHTML = labels.join('<br>');
+      return div;
+    };
+  
+    // Finally, we our legend to the map.
+    legend.addTo(map);
+
+  // Here we create a legend control object.
+  let legend2 = L.control({
+    position: "bottomleft"
+  });
+  
+  // Then add all the details for the legend
+  legend2.onAdd = function() {
+    let div2 = L.DomUtil.create("div", "info legend");
+    labels2 = ['<strong>Employment Rate</strong>'];
+
+  
+    const percentage2 = [0,85,87,9,92, 94, 94.5, 95, 95.5, 96, 96.5, 97, 97.5];
+    const colors2 = [
+      "#006d2c",
+      "#013220",
+      "#238b45", 
+      "#41ab5d",
+      "#fff7fb",
+      "#ece7f2",
+      "#d0d1e6",
+      "#a6bddb",
+      "#74a9cf",
+      "#3690c0",
+      "#0570b0",
+      "#045a8d",
+      "#023858"
+      
+    ];
+  
+  // Looping through our intervals to generate a label with a colored square for each interval.
+    for (var i = 0; i < percentage2.length; i++) {
+      console.log(colors2[i]);
+      div2.innerHTML +=
+      labels2.push(
+        "<i style='background: " + colors2[i] + "'></i> " +
+        percentage2[i] + (percentage2[i + 1] ? "&ndash;" + percentage2[i + 1] + "<br>" : "+"));
+      }
+      div2.innerHTML = labels2.join('<br>');
+      return div2;
+    };
+  
+    // Finally, we our legend to the map.
+    legend2.addTo(map);
 
 
 
