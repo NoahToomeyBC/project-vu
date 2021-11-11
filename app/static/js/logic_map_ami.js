@@ -107,12 +107,12 @@ $.getJSON(link,function(data){
 
       // This function determines the radius of the earthquake marker based on its magnitude.
   // Earthquakes with a magnitude of 0 were being plotted with the wrong radius.
-    function getRadius(percent) {
-      if (percent === 0) {
-        return 1;
-      }
-      return percent * .001;
+  function getRadius(population) {
+    if (population === 0) {
+      return 1;
     }
+    return population * .0001;
+  }
 
   L.geoJson(data,{
  	// We turn each feature into a circleMarker on the map.
@@ -173,12 +173,12 @@ $.getJSON(link,function(data){
 
       // This function determines the radius of the earthquake marker based on its magnitude.
   // Earthquakes with a magnitude of 0 were being plotted with the wrong radius.
-    function getRadius(percent) {
-      if (percent === 0) {
-        return 1;
-      }
-      return percent * .001;
+  function getRadius(population) {
+    if (population === 0) {
+      return 1;
     }
+    return population * .0001;
+  }
 
   
     L.geoJson(data,{
@@ -239,12 +239,12 @@ $.getJSON(link,function(data){
 
       // This function determines the radius of the earthquake marker based on its magnitude.
   // Earthquakes with a magnitude of 0 were being plotted with the wrong radius.
-    function getRadius(percent) {
-      if (percent === 0) {
-        return 1;
-      }
-      return percent * .001;
+  function getRadius(population) {
+    if (population === 0) {
+      return 1;
     }
+    return population * .0001;
+  }
 
     
       L.geoJson(data,{
