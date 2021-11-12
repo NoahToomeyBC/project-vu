@@ -111,7 +111,7 @@ $.getJSON(link,function(data){
     if (population === 0) {
       return 1;
     }
-    return population * .0001;
+    return population * .00005;
   }
 
   L.geoJson(data,{
@@ -177,7 +177,7 @@ $.getJSON(link,function(data){
     if (population === 0) {
       return 1;
     }
-    return population * .0001;
+    return population * .000017;
   }
 
   
@@ -243,7 +243,7 @@ $.getJSON(link,function(data){
     if (population === 0) {
       return 1;
     }
-    return population * .0001;
+    return population * .000017;
   }
 
     
