@@ -24,8 +24,8 @@ let light = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles
 
 // Create the map object with center, zoom level and default layer.
 let map = L.map('map', {
-	center: [35.0902, -95.7129],
-	zoom: 5,
+	center: [39.0902, -95.7129],
+	zoom: 4.5,
 	layers: [streets],
 });
 
@@ -491,3 +491,12 @@ $.getJSON(link,function(data){
 
 
 
+$(document).ready(function () {
+
+  var newParent = document.getElementById('custom-map-controls');
+          var oldParent = document.getElementsByClassName("leaflet-bottom leaflet-left")
+  
+          while (oldParent[0].childNodes.length > 0) {
+              newParent.appendChild(oldParent[0].childNodes[0]);
+          }
+    });

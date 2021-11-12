@@ -102,8 +102,23 @@
 
     </div>
     <!-- create map id -->
+    <div id="custom-map-controls"></div>
     <div id='map'></div>
-  
+    <div class="container-fluid" style="padding-top: 30px;">
+      <header>
+      </header>
+      <div class="col-md-4 center" id="purposeHead" >
+          <h3>What Does This Map Represent?</h3>
+      </div>
+      <div class="col-md-8 center" id="purposeBody">
+          <p style="font-size:18px;">
+            The colors of the markers on this map represent the percentage of the study's population who have some form of mentall illness who did not recieve treatment.
+            The size of the markers represent the population of . We can see that the percentage of respondents who did not recieve treatments
+            increases from 2019 to 2020 which coincides with the extremely low employment rates that we see in 2020. While employment improves greatly in 2021,
+            the percentage of the study's population stays relatively similar and even increases in some cases. 
+          </p>
+      </div>
+    <script src="../static/js/konami.js"></script>
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="

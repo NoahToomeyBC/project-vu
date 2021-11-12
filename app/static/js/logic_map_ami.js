@@ -492,4 +492,12 @@ $.getJSON(link,function(data){
 
 
 
+$(document).ready(function () {
 
+  var newParent = document.getElementById('custom-map-controls');
+          var oldParent = document.getElementsByClassName("leaflet-bottom leaflet-left")
+  
+          while (oldParent[0].childNodes.length > 0) {
+              newParent.appendChild(oldParent[0].childNodes[0]);
+          }
+    });
