@@ -8,6 +8,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -17,10 +18,11 @@
 
 
 
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/NoahToomeyBC/project-vu">
+  <a href="https://piechart-project.herokuapp.com/">
     <img src="https://beingalivela.org/wp-content/uploads/2015/01/mental-health.jpg" alt="Logo" width="500" height="400">
 
   <a href="https://github.com/KimBro763/project-vu">
@@ -76,6 +78,8 @@
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
+* [Leaflet.js](https://leafletjs.com/)
+* [Mapbox API] (https://mapbox.com/)
 
 
 
@@ -88,20 +92,33 @@ To get a local copy up and running follow these simple example steps.
 
 ### Data Sources
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [https://www.mapbox.com/](https://www.mapbox.com/) after signing up for an account (It's Free!)
+
 2. Clone the repo
    ```sh
    git clone https://github.com/github_username/repo_name.git
    ```
-3. Install NPM packages
+3. Install Requirements in your preffered bash CLI
    ```sh
-   npm install
+   conda activate YOURENV
+   cd ../your_git_directory/project-vu/
+   pip install requirements.txt
    ```
-4. Enter your API in `config.js`
+4. Enter your mapbox API key in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
-
+ 5. Run The Application
+  ``` sh
+  cd ../project-vu/app
+  flask run
+  ```
+  OR
+  ```sh
+  cd ../project-vu/app
+  python app.py
+  ```
+  
 ## Data Cleaning
  
 ### PDF Cleaning
@@ -152,9 +169,7 @@ A [python script](https://github.com/PazilatNur/project-vu/blob/main/dataframe_s
   
 ## Data Visualization
 
-Type your stuff here.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+We utilized both Leaflet and Plotly to handle all of our visualizations which can be accessed through our [website!](https://piechart-project.herokuapp.com) 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -163,18 +178,17 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Machine Learning
  
   Science
-
-See the [open issues](https://github.com/NoahToomeyBC/project-vu/issues) for a full list of proposed features (and known issues).
-
-  Please ML folder for ML related updates
+  
+Please ML folder for ML related updates
+  
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-## Dashboard
+## Website
   
-  Dashboard stuff here
-
+You can access our website [here](https://piechart-project.herokuapp.com)
+  
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -208,8 +222,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 ## Acknowledgments
 
 * [README Template Refactored From <br> https://github.com/othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-* []()
-* []()
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
