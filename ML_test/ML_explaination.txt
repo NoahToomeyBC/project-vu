@@ -1,0 +1,34 @@
+Data Connection and Selections
+
+Assumption:
+There is a correlation between unemployment and its impact on mental health.
+
+-------
+
+Data collection and Connection:
+For identifing underlying relation and mathematic proofs, we put togteher 2 main sources of data. 
+
+1. Our data from Mental Health America's State of Mental Health in America yearly report. This is also the main sources behind our analysis and visulizations.
+We pulled together YoY mental health population, population of suicide ideation by states.
+
+
+2. From US Bureau of Labor to get the monthly unemployment rate by states from 2019 to 2020. 
+
+
+---------
+
+Data preparition for the machine learning model:
+
+- All of our initial data was cleaned and stored in AWS RS service. I extracted the data live by connecting to the pgAdmin by sqlalchemy.
+-We have 3 potetial tables based on the data sources. 
+
+Given we our assumption is the relationship between unemployment data and mental health cases. We need to link this 2 seperate data sources toegtehr.
+Method:
+python merge.
+- The tricky part is we need to use population for our analysis in order to be accurte with our stats. However, we have unrmploymrnt rate but not population.
+- After the data connection, we used one of the table that contained mental health population and percentage by state to create the state population based on each year column.
+Then, we merged the 2 tables of data on "year" and "state" columns.Last step was to create the "pop_unemployment" column for unemployment population based on the unemlpoyment rate
+and state_population by year. 
+
+So our master table for machine learning training and test is called new_df.
+
