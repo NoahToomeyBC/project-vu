@@ -92,9 +92,20 @@ body,
     position: relative;
     left: auto;
     right: auto;
-
 }
 
+#bulletList{
+  padding-left: 100px;
+  padding-right: 100px;
+  max-width: 200ch;
+  padding-bottom: 50px;
+}
+
+#bullet{
+  text-indent: 20px;
+  color: white;
+  max-width: 205ch;
+}
 #tableHold{
   align-items: center;
 }
@@ -133,6 +144,13 @@ body,
   padding: 10px;
 }
 
+#purposeHead2 {
+  margin: auto;
+  width: 50%;
+  border: .0001px solid green;
+  padding: 10px;
+}
+
 #purposeBody {
   margin: auto;
   width: 50%;
@@ -147,6 +165,9 @@ body,
   padding:20px;
   width:100%;
   height:50%;
+}
+.li{
+  color:white;
 }
 
 #headImage{

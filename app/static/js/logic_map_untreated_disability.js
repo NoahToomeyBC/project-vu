@@ -87,21 +87,21 @@ $.getJSON(link,function(data){
     // This function determines the color of the marker based percentage of respondents.
     function getColor(percent) {
       if (percent > 41) {
-        return "#ea2c2c";
+        return  "#98ee00";
       }
       if (percent > 36) {
-        return "#ea822c";
+        return  "#d4ee00";
       }
       if (percent > 32) {
-        return "#ee9c00";
+        return "#eecc00" ;
       }
       if (percent > 28) {
-        return "#eecc00";
+        return "#ee9c00";
       }
       if (percent > 24) {
-        return "#d4ee00";
+        return "#ea822c";
       }
-      return "#98ee00";
+      return "#ea2c2c";
     }
 
       // This function determines the radius of the marker based on population
@@ -152,21 +152,21 @@ $.getJSON(link,function(data){
     
     function getColor(percent) {
       if (percent > 41) {
-        return "#ea2c2c";
+        return  "#98ee00";
       }
       if (percent > 36) {
-        return "#ea822c";
+        return  "#d4ee00";
       }
       if (percent > 32) {
-        return "#ee9c00";
+        return "#eecc00" ;
       }
       if (percent > 28) {
-        return "#eecc00";
+        return "#ee9c00";
       }
       if (percent > 24) {
-        return "#d4ee00";
+        return "#ea822c";
       }
-      return "#98ee00";
+      return "#ea2c2c";
     }
 
 // This function determines the radius of the marker based on population
@@ -216,21 +216,21 @@ $.getJSON(link,function(data){
         // This function determines the color of the marker based percentage of respondents.
         function getColor(percent) {
           if (percent > 41) {
-            return "#ea2c2c";
+            return  "#98ee00";
           }
           if (percent > 36) {
-            return "#ea822c";
+            return  "#d4ee00";
           }
           if (percent > 32) {
-            return "#ee9c00";
+            return "#eecc00" ;
           }
           if (percent > 28) {
-            return "#eecc00";
+            return "#ee9c00";
           }
           if (percent > 24) {
-            return "#d4ee00";
+            return "#ea822c";
           }
-          return "#98ee00";
+          return "#ea2c2c";
         }
 
           // This function determines the radius of the marker based on its population.
@@ -414,7 +414,7 @@ $.getJSON(link,function(data){
     labels = ['<strong>Percentage</strong>'];
 
   
-    const percentage = [0, 24, 28, 32, 36, 41];
+    const percentage = [41, 36, 32, 28, 24, 0];
     const colors = [
       "#98ee00",
       "#d4ee00",

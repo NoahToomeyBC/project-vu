@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
-    <title>Adults With Suicidal Ideation</title>
+    <title>Suicidal Ideation vs Employment by State</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -47,7 +47,7 @@
 <body class="bg-info">
     
     <div class='nav-brand' id="topText"> 
-        <h1 id="topHeaderMap">Adults With Suicidal Ideation</h1>
+        <h1 id="topHeaderMap">Suicidal Ideation vs Employment by State</h1>
     </div> 
     
     
@@ -107,16 +107,35 @@
     <div class="container-fluid" style="padding-top: 30px;">
       <header>
       </header>
+      <section class="fragment fragment-three">
       <div class="col-md-4 center" id="purposeHead" >
-          <h3>What Does This Map Represent?</h3>
+          <h3>How to Interpret</h3>
       </div>
+      
       <div class="col-md-8 center" id="purposeBody">
-          <p style="font-size:18px;">
-            The colors of the markers on this map represent the percentage of the study's population who have some form of mentall illness who did not recieve treatment.
-            The size of the markers represent the population of . We can see that the percentage of respondents who did not recieve treatments
-            increases from 2019 to 2020 which coincides with the extremely low employment rates that we see in 2020. While employment improves greatly in 2021,
-            the percentage of the study's population stays relatively similar and even increases in some cases. 
+        <ul style="font-size: large;">
+          <li style="color:white;">•	This map is overlayed with the employment rate, by state, with the numbers portraying the total percentage employed. So, if a state is 96% employed then the state has 4% unemployment rate. </li>
+          </ul>
+
+          <ul>
+          <li style="color:white;">The size of the markers represents the population of as it relates to state&rsquo;s number of respondents.</li>
+          </ul>
+
+          <ul>
+          <li style="color:white;">The colors of the markers on this map represent the percentage of the study's population who have suicidal ideations who did not receive treatment.</li>
+          </ul>
+
+          <ul>
+          <li style="color:white;">By clicking on the layers on the top right of the map, filters of suicidal ideations by year are displayed.</li>
+          </ul>
+          <div class="col-md-4 center" id="purposeHead" >
+            <h3>Our Analysis</h3>
+        </div>
+        <p style="font-size: large;">Generally, this map does not illustrate that there is a strong relationship between suicidal ideations and employment across the nation. Also, states mostly maintain their rankings throughout the three years. There are a few interesting exceptions, particularly when we look at New York. The state had a low unemployment rate and suicidal ideation rate, though, both appears to become higher over three years. The pandemic hit New York, specifically, New York City hard during the pandemic and it could be suggested that this was a cause for the rise. Additionally, New York, like New Jersey, has very dense populations (relatively) and it is also assessed that the pandemic proved worse in densely populated areas because of a variety of reasons, namely, viral transmission.
+          While still debated, the “suicide paradox”, the idea that people in well off places tend to have a higher rate of suicide came somewhat be applied this map, as the states with higher suicide ideations tend to be what are generally considered some of the nation’s wealthiest. 
+          Other factors that are acknowledged, but not considered, are suicide ideations as it relates to PTSD, Chronic traumatic encephalopathy, and other external factors. 
           </p>
+      </section>
       </div>
     <script src="../static/js/konami.js"></script>
     <!-- Leaflet JavaScript -->
