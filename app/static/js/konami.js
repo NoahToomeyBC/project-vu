@@ -39,8 +39,8 @@ var allowedKeys = {
 
   function activateCheats() {
   
-    (window.alert('¯\\_(ツ)_/¯ ')) 
+    (window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')).focus()
+    (alert('¯\\_(ツ)_/¯ '))
     {
-        window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';
     };
   }
