@@ -79,7 +79,7 @@
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 * [Leaflet.js](https://leafletjs.com/)
-* [Mapbox API] (https://mapbox.com/)
+* [Mapbox API](https://mapbox.com/)
 * [jQuery](https://jquery.com/)
 
 
