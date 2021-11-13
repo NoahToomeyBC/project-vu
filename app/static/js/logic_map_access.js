@@ -84,7 +84,7 @@ $.getJSON(link,function(data){
     };
   }
   
-    // This function determines the color of the marker based on the magnitude of the earthquake.
+    // This function determines the color of the marker based percentage of respondents.
     function getColor(percent) {
       if (percent > 60) {
         return "#ea2c2c";
@@ -104,8 +104,7 @@ $.getJSON(link,function(data){
       return "#98ee00";
     }
 
-      // This function determines the radius of the earthquake marker based on its magnitude.
-  // Earthquakes with a magnitude of 0 were being plotted with the wrong radius.
+    // This function determines the radius of the marker based on population
     function getRadius(population) {
       if (population === 0) {
         return 1;
@@ -150,7 +149,7 @@ $.getJSON(link,function(data){
         pane: 'markerPane'
       };
     }
-    
+    // This function determines the color of the marker based percentage of respondents.
     function getColor(percent) {
       if (percent > 60) {
         return "#ea2c2c";
@@ -170,8 +169,7 @@ $.getJSON(link,function(data){
       return "#98ee00";
     }
 
-      // This function determines the radius of the earthquake marker based on its magnitude.
-  // Earthquakes with a magnitude of 0 were being plotted with the wrong radius.
+    // This function determines the radius of the marker based on population
     function getRadius(population) {
       if (population === 0) {
         return 1;
@@ -191,8 +189,7 @@ $.getJSON(link,function(data){
           },
         // We set the style for each circleMarker using our styleInfo function.
       style: styleInfo,
-       // We create a popup for each circleMarker to display the magnitude and location of the earthquake
-       //  after the marker has been created and styled.
+       // We create a popup for each circleMarker
        onEachFeature: function(feature, layer) {
         layer.bindPopup(" <b>State: " + feature.properties.State + 
         "<br> <b>Rank:</b> " + feature.properties.Rank_adult_care_access_2020 +
@@ -216,7 +213,7 @@ $.getJSON(link,function(data){
         };
       }
       
-        // This function determines the color of the marker based on the magnitude of the earthquake.
+    // This function determines the color of the marker based percentage of respondents.
         function getColor(percent) {
           if (percent > 60) {
             return "#ea2c2c";
@@ -236,8 +233,7 @@ $.getJSON(link,function(data){
           return "#98ee00";
         }
     
-          // This function determines the radius of the earthquake marker based on its magnitude.
-      // Earthquakes with a magnitude of 0 were being plotted with the wrong radius.
+        // This function determines the radius of the marker based on population
         function getRadius(population) {
           if (population === 0) {
             return 1;
@@ -257,8 +253,7 @@ $.getJSON(link,function(data){
             },
           // We set the style for each circleMarker using our styleInfo function.
         style: styleInfo,
-          // We create a popup for each circleMarker to display the magnitude and location of the earthquake
-          //  after the marker has been created and styled.
+          // We create a popup for each circleMarker 
           onEachFeature: function(feature, layer) {
           layer.bindPopup("<b>State:</b> " + feature.properties.State + 
           "<br> <b>Rank:</b> " + feature.properties.Rank_adult_access_2021 +
@@ -285,7 +280,7 @@ $.getJSON(link,function(data){
               dashArray: '3',
               fillOpacity: 0.6
           };
-            // This function determines the color of the marker based on the magnitude of the earthquake.
+            //This function determines the color of the marker based on Employment Rate
             function getColor(percentage) {
               if (percentage > .975) {
                 return "#023858";
@@ -329,7 +324,7 @@ $.getJSON(link,function(data){
               dashArray: '3',
               fillOpacity: 0.6
           };
-            // This function determines the color of the marker based on the magnitude of the earthquake.
+            //This function determines the color of the marker based on Employment Rate
             function getColor(percentage) {
               if (percentage > .975) {
                 return "#023858";
@@ -373,7 +368,7 @@ $.getJSON(link,function(data){
               dashArray: '3',
               fillOpacity: 0.6
           };
-            // This function determines the color of the marker based on the magnitude of the earthquake.
+            //This function determines the color of the marker based on Employment Rate
             function getColor(percentage) {
               if (percentage > .975) {
                 return "#023858";
