@@ -94,6 +94,10 @@ body,
     right: auto;
 
 }
+
+#tableHold{
+  align-items: center;
+}
 .fragment-three .btn btn-primary{
     color: #ff9900;
 
@@ -101,6 +105,10 @@ body,
 
 .fragment-three .custom-indicator {
     background-color: #fff !important;
+}
+#tester{
+  padding-left: 50px;
+  align-items: center;
 }
 
 #custom-map-controls{
