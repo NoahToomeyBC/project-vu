@@ -87,5 +87,44 @@ Initial result: appraently, by introuding more data can help improve model accur
 Model_Test3: OLS Model
 
 In order to continue find the better moedl, we introduced ols model from statsmodels.formula.api .
-This time, we imported preprocessing from sklearn to transform our data to more normalized table
+This time, we imported preprocessing from sklearn to transform our data to more normalized table with standardScaler.
+
+ OLS Regression report as the following:
+
+ <ols_regression1>
+ In this model, it apears to have a improved R-squared at 0.761 compared to our previous model.
+Based on the model, every one unit increase in unemployment population, it increases the mental health concerns by 1.4.
+But Kurtosis (a measure of whether the data are heavy-tailed or light-tailed relative to a normal distribution.) Looks high even after by sklearn preprocessing. 
+After graphng the data, it looks like we need continue to use log.
+
+
+Model_Test4: OLS with additional attr
+
+In this model we introduced mentalhealth workforce per person as additional attribute that impacts on our 
+ami trends. 
+
+<ols_regression2>
+
+
+With the introduction of another attr, it seems to imrpoved our Adj.R-squared to 0.779.
+However, it also increased our std error quite a lot. So not optimal as a model
+
+
+Model_Test 5: With log10 normalized data and excluding workforce again
+
+<ols_regression3>
+
+This model has Adj. R-squared:	0.753
+low std error of 0.016
+low Kurtosis: 2.168
+
+
+Alhtough this model has has the same Adj. R-squared of 0.753 comapred to Moel_test2 but lower MSE.
+It looks like Model_Test 5 would be the winner of our machine learning test. 
+
+-----------
+
+
+
+
 
