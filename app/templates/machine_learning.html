@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <title>Mental Health in America</title>
+    <title>Machine Learning: Mental Health in America</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -40,15 +40,12 @@
 
 </head>
 <body class="bg-info">
-    
+    <!-- Header -->
     <div class='nav-brand' id="topText"> 
-        <!-- <a href='home.php'> 
-          <img src='../static/images/bg.png' width='150' height='60px'> 
-        </a> -->
-        <h1 id="topHeader">Mental Health In America</h1>
+        <h1 id="topHeader">Machine Learning</h1>
     </div> 
     
-    
+  <!-- Drop Down nav   -->
     <div class="wrapper", id = "navbarWrapper">
         <nav class="navbar navbar-expand-lg navbar-light bg-info">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,12 +92,96 @@
             </div>
         </nav>
     </div>
-    
+    <!-- Header Image -->
     <div class="jumbotron" style="background-image: url(https://cdn1.onlinecounselingprograms.com/content/d58803d7d7b84778a00900d55edb0f26/9646_OCP_Managing-Your-Mental-Health-in-College-hero.jpg); background-size: 100%;">
 
     </div>
+    <section class="fragment fragment-three">
+      <button onclick="mlShowHideFunc()">Try it</button>
 
-<h1>Coming soon!</h1>
+      <div id="myDIV" class="container-fluid">
+        <header>
+        </header>
+        <div class="col-md-4" id="purposeHead">
+            <h3>Preliminary Test</h3>
+        </div>
+        <div class="col-md-8 center"  id="purposeBody">
+          <ul style="font-size: large;">
+
+            <li style="color:white;">Before we getting into the complexity of machine learning, we want to quickly test out there is a strong correlationship between these data. So we used python pandas seaborn and numpy functions
+              to run a quick stats check.
+            </li>
+
+            <li style="color:white;">
+              Researchers found that between any_mental_health_pop and unemploment population, there is<b> 0.87 correlation coefficient. </b> &nbsp;
+              Given the strong evidence of the data, we move on with our linear regression model.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+      <div class="container-fluid" style='padding-top: 20px';>
+        <header>
+        </header>
+        <div class="col-md-4" id="purposeHead">
+            <h3>Data Collection and Connection<br><small>For identifing underlying relation and mathematic proofs, we put togteher 2 main sources of data. </small></h3>
+        </div>
+        <div class="col-md-8 center"  id="purposeBody">
+          <ul style="font-size: large;">
+
+            <li style="color:white;"> Our data from Mental Health America's State of Mental Health in America yearly report. This is also the main sources behind our analysis and visulizations.
+              We pulled together Year-Over-Year mental health population, population of suicide ideation by states.
+               </li>
+
+              <li style="color:white;">From US Bureau of Labor to get the monthly unemployment rate by states from 2019 to 2020.</li>
+            </ul>
+        </div>
+
+    </div>
+
+  <section class="fragment fragment-three">
+    
+  <div class="container-fluid">
+
+  <div class="col-md-8 center" id="purposeBody">
+
+  <div class="col-md-4 center" id="purposeHead" >
+      <h3>Data Preparation</h3>
+    </div>
+
+    <ul style="font-size: large; padding-top: 20px;">
+      <li style="color:white;">All of our initial data was cleaned and stored in AWS RS service. Data was extracted live by connecting to a postgreSQL
+                                 server hooked up through pgAdmin and accessed with sqlalchemy. 
+      </li>
+      &nbsp;
+
+
+      <li style="color:white;">Researchers were able to merge three potential data sources to work with through pgAdmin.</li>
+      &nbsp;
+
+      <li style="color:white;">Because our assumption is that there is a relationship between unemployment data and mental health cases,
+        researchers linked two seperate data sources together using the python method of merge.</li>
+      &nbsp;
+
+      <li style="color:white;">The tricky part is we need to use population for our analysis in order to be accurte with our stats. However, researchers at this time only had unemployment rates
+         but not population data.
+      </li>
+      &nbsp;
+
+      <li style="color: white;">
+        After the data connection, we used one of the table that contained mental health population and percentage by state to create the state population based
+        on each year column. Then, we merged the 2 tables of data on "year" and "state" columns.Last step was to create the "pop_unemployment" column for
+        unemployment population based on the unemlpoyment rate and state_population by year. 
+
+      </li>
+
+  </div>
+
+  </section>
+
+
 <script src="../static/js/konami.js"></script>
+<script src = "../static/js/logic_machine_learn.js"> </script>
+
 </body>
 </html>
