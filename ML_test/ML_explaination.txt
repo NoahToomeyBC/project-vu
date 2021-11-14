@@ -93,24 +93,12 @@ This time, we imported preprocessing from sklearn to transform our data to more 
 
  <ols_regression1>
  In this model, it apears to have a improved R-squared at 0.761 compared to our previous model.
-Based on the model, every one unit increase in unemployment population, it increases the mental health concerns by 1.4.
 But Kurtosis (a measure of whether the data are heavy-tailed or light-tailed relative to a normal distribution.) Looks high even after by sklearn preprocessing. 
-After graphng the data, it looks like we need continue to use log.
+After graphing the data, it looks like we need continue to use log to normalized to acchieve normal distribution.
 
 
-Model_Test4: OLS with additional attr
 
-In this model we introduced mentalhealth workforce per person as additional attribute that impacts on our 
-ami trends. 
-
-<ols_regression2>
-
-
-With the introduction of another attr, it seems to imrpoved our Adj.R-squared to 0.779.
-However, it also increased our std error quite a lot. So not optimal as a model
-
-
-Model_Test 5: With log10 normalized data and excluding workforce again
+Model_Test 4: With log10 normalized data and excluding workforce again
 
 <ols_regression3>
 
@@ -118,9 +106,7 @@ This model has Adj. R-squared:	0.753
 low std error of 0.016
 low Kurtosis: 2.168
 
-
-Alhtough this model has has the same Adj. R-squared of 0.753 comapred to Moel_test2 but lower MSE.
-It looks like Model_Test 5 would be the winner of our machine learning test. 
+model_Test 5: introducing 
 
 -----------
 
@@ -143,6 +129,9 @@ Prediction plot:
 - we predict into the future 12 months
 You can see the plot on our model's mape(mean absolute percent error) that as it gets longer into the future, our percent error increases.
 It looks like <180 days make senses to use for our next step of predicition.
+
+
+<Longer_future error>
 
 DISCLAIMER: THIS FUTURE AMI IS PREDICTED ON PREDICTED_UNEMLPOYMENT RATE. SO PLEASE TAKE THIS RESULT WITH AGRAIN OF state_population
 
