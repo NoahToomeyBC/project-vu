@@ -125,6 +125,28 @@ It looks like Model_Test 5 would be the winner of our machine learning test.
 -----------
 
 
+Predict Future
+
+The next machine learning model, we are llokuing at the future unemployment rate and understand the mental health trends of US in the near future without any action. 
+
+in this section we use the prephet funtion to perform time series projection on the unemployment data.
+The reason that we choose not directly use the mental_heath data is:
+This data set is only structured in YoY bases, and this is too little data to drove any meaningful projection.
+On the other hand, for unemployment data we have MoM state level unemployment rate for 2019-2021 3 years of period.
+
+
+Prediction plot:
+
+<future unemlpoyment data>
+
+
+- we predict into the future 12 months
+You can see the plot on our model's mape(mean absolute percent error) that as it gets longer into the future, our percent error increases.
+It looks like <180 days make senses to use for our next step of predicition.
+
+DISCLAIMER: THIS FUTURE AMI IS PREDICTED ON PREDICTED_UNEMLPOYMENT RATE. SO PLEASE TAKE THIS RESULT WITH AGRAIN OF state_population
+
+
 
 
 
