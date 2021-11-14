@@ -115,7 +115,7 @@ As COVID impacted unemployment rate significantly along with mental health of US
 In order to have more accurate rate on the ami with slightly more data and based on our earlier correlation stats result, we decided to bring in ehalth_care workforce into our model.
 
 <OLS_regression workforce model>
-This time, our model Adj.R-squared improved to 0.901 whike both std error of unemployed and mentalhealth workforce remained low.
+This time, our model Adj.R-squared improved to 0.901 while both std error of unemployed and mentalhealth workforce remained low.
 And our low kurtosis indicating taht our data is normalized.
 
 
@@ -138,7 +138,7 @@ Prediction plot:
 <future unemlpoyment data>
 
 
-- we predict into the future 12 months
+- we predict i1nto the future 12 months
 You can see the plot on our model's mape(mean absolute percent error) that as it gets longer into the future, our percent error increases.
 It looks like <180 days make senses to use for our next step of predicition.
 
