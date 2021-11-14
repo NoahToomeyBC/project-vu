@@ -8,6 +8,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -17,16 +18,15 @@
 
 
 
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<<<<<<< HEAD
-  <a href="https://github.com/PazilatNur/project-vu">
+  <a href="https://piechart-project.herokuapp.com/">
     <img src="https://beingalivela.org/wp-content/uploads/2015/01/mental-health.jpg" alt="Logo" width="500" height="400">
-=======
+
   <a href="https://github.com/KimBro763/project-vu">
     <img src="https://user-images.githubusercontent.com/84995704/139769526-fa05e437-32e5-4052-9215-61dd79618495.png" alt="Logo" width="300" height="300">
->>>>>>> 409fdbab1492c5952f176d04e773cb48a33f305e
   </a>
 
 <h3 align="center"> Impacts of Mental Health Based on Access to Care and Employment </h3>
@@ -64,7 +64,7 @@
 ## About The Project
 <br />
 <div align="left">
-  <a href="https://github.com/PazilatNur/project-vu">
+  <a href="https://github.com/NoahToomeyBC/project-vu">
     <img src="https://cdn1.onlinecounselingprograms.com/content/d58803d7d7b84778a00900d55edb0f26/9646_OCP_Managing-Your-Mental-Health-in-College-hero.jpg" alt="Logo" width="1200" height="150">
   </a>
 
@@ -78,6 +78,9 @@
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
+* [Leaflet.js](https://leafletjs.com/)
+* [Mapbox API](https://mapbox.com/)
+* [jQuery](https://jquery.com/)
 
 
 
@@ -90,20 +93,33 @@ To get a local copy up and running follow these simple example steps.
 
 ### Data Sources
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [https://www.mapbox.com/](https://www.mapbox.com/) after signing up for an account (It's Free!)
+
 2. Clone the repo
    ```sh
    git clone https://github.com/github_username/repo_name.git
    ```
-3. Install NPM packages
+3. Install Requirements in your preffered bash CLI
    ```sh
-   npm install
+   conda activate YOURENV
+   cd ../your_git_directory/project-vu/
+   pip install requirements.txt
    ```
-4. Enter your API in `config.js`
+4. Enter your mapbox API key in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
-
+ 5. Run The Application
+  ``` sh
+  cd ../project-vu/app
+  flask run
+  ```
+  OR
+  ```sh
+  cd ../project-vu/app
+  python app.py
+  ```
+  
 ## Data Cleaning
  
 ### PDF Cleaning
@@ -154,9 +170,7 @@ A [python script](https://github.com/PazilatNur/project-vu/blob/main/dataframe_s
   
 ## Data Visualization
 
-Type your stuff here.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+We utilized both Leaflet and Plotly to handle all of our visualizations which can be accessed through our [website!](https://piechart-project.herokuapp.com) 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -165,18 +179,17 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Machine Learning
  
   Science
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-  Please ML folder for ML related updates
+  
+Please ML folder for ML related updates
+  
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-## Dashboard
+## Website
   
-  Dashboard stuff here
-
+You can access our website [here](https://piechart-project.herokuapp.com)
+  
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -196,11 +209,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 - Noah Toomey - [https://github.com/NoahToomeyBC](https://github.com/NoahToomeyBC)
 - Ryan Grady -  [https://github.com/ryan22grady](https://github.com/ryan22grady)
 
-<<<<<<< HEAD
-Project Link: [https://github.com/github_username/repo_name](https://github.com/PazilatNur/project-vu)
-=======
-Project Link: [https://github.com/github_username/repo_name](https://github.com/KimBro763/project-vu)
->>>>>>> 409fdbab1492c5952f176d04e773cb48a33f305e
+
+Project Link: [https://github.com/github_username/repo_name](https://github.com/NoahToomeyBC/project-vu)
+
+Project Link: [https://github.com/github_username/repo_name](https://github.com/NoahToomeyBC/project-vu)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -210,8 +223,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 ## Acknowledgments
 
 * [README Template Refactored From <br> https://github.com/othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-* []()
-* []()
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -219,16 +231,16 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/PazilatNur/project-vu.svg?style=for-the-badge
-[contributors-url]: https://github.com/PazilatNur/project-vu/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/PazilatNur/project-vu.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/NoahToomeyBC/project-vu.svg?style=for-the-badge
+[contributors-url]: https://github.com/NoahToomeyBC/project-vu/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/NoahToomeyBC/project-vu.svg?style=for-the-badge
 [forks-url]: https://github.com/KimBro763/project-vu/network/members
-[stars-shield]: https://img.shields.io/github/stars/PazilatNur/project-vu.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/NoahToomeyBC/project-vu.svg?style=for-the-badge
 [stars-url]: https://github.com/KimBro763/project-vu/stargazers
-[issues-shield]: https://img.shields.io/github/issues/KimBro763/project-vu/.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/NoahToomeyBC/project-vu.svg?style=for-the-badge
 [issues-url]: https://github.com/KimBro763/project-vu/issues
-[license-shield]: https://img.shields.io/github/license/PazilatNur/project-vu.svg?style=for-the-badge
-[license-url]: https://github.com/KimBro763/project-vu/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/NoahToomeyBC/project-vu.svg?style=for-the-badge
+[license-url]: https://github.com/NoahToomeyBC/project-vublob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png

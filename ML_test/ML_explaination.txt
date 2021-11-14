@@ -1,0 +1,153 @@
+Data Connection and Selections
+
+Assumption:
+There is a correlation between unemployment and its impact on mental health.
+
+-------
+
+Data collection and Connection:
+For identifing underlying relation and mathematic proofs, we put togteher 2 main sources of data. 
+
+1. Our data from Mental Health America's State of Mental Health in America yearly report. This is also the main sources behind our analysis and visulizations.
+We pulled together YoY mental health population, population of suicide ideation by states.
+
+
+2. From US Bureau of Labor to get the monthly unemployment rate by states from 2019 to 2020. 
+
+
+---------
+
+Data preparition for the machine learning model:
+
+- All of our initial data was cleaned and stored in AWS RS service. I extracted the data live by connecting to the pgAdmin by sqlalchemy.
+-We have 3 potetial tables based on the data sources. 
+
+Given we our assumption is the relationship between unemployment data and mental health cases. We need to link this 2 seperate data sources toegtehr.
+Method:
+python merge.
+- The tricky part is we need to use population for our analysis in order to be accurte with our stats. However, we have unrmploymrnt rate but not population.
+- After the data connection, we used one of the table that contained mental health population and percentage by state to create the state population based on each year column.
+Then, we merged the 2 tables of data on "year" and "state" columns.Last step was to create the "pop_unemployment" column for unemployment population based on the unemlpoyment rate
+and state_population by year. 
+
+So our master table for machine learning training and test is called new_df.
+
+Before we getting into the complexity of machine learning, we want to quickly test out there is a strong correlationship between these data. So we used python pandas seaborn and numpy functions
+to run a quick stats check.
+
+between any_mental_health_pop and unemploment population, there is 0.87 correlation coefficient. 
+Given the strong evidence of the data, we move on with our linear regression model.
+
+
+<img unemployment_correlation>
+
+Machine Learning
+
+When combined the data, we need to ge rid of the null value caused by missing when we merged. 
+When we done with the data merge:
+Number of states left when there is no null valye for 
+2019    51
+2020    50
+2021    48
+
+First we want to make sure our data has a normal distribution.
+using matplotlit histogram, we found out our data heavly skewed as the following:
+
+<unnormalized data>
+
+So our first step is to normalize the data by using numpy log10() function as the follwoing:
+
+<normalized data>
+
+
+From sklearn imported LinearRegression
+
+Model Test_1:
+We used a single year data of mental_health_cases and 2020 unemlpoyment data
+
+<model_test1>
+
+mean squared error (MSE): 0.07728
+R-squared (R2 ): 0.746550
+Model Score is: 0.728
+
+Model_Tes2:
+We introduced more data point to improve the model score.
+<model_test2>
+
+mean squared error (MSE): 0.06796
+R-squared (R2 ): 0.7530
+Model score: 0.769
+
+Initial result: appraently, by introuding more data can help improve model accuracy.
+- Our MSE also improved by 12%.
+- Model accuracy score also improved significantly from 0.73 to 0.77
+
+
+Model_Test3: OLS Model
+
+In order to continue find the better moedl, we introduced ols model from statsmodels.formula.api .
+This time, we imported preprocessing from sklearn to transform our data to more normalized table with standardScaler.
+
+ OLS Regression report as the following:
+
+ <ols_regression1>
+ In this model, it apears to have a improved R-squared at 0.761 compared to our previous model.
+But Kurtosis (a measure of whether the data are heavy-tailed or light-tailed relative to a normal distribution.) Looks high even after by sklearn preprocessing. 
+After graphing the data, it looks like we need continue to use log to normalized to acchieve normal distribution.
+
+
+
+Model_Test 4: With log10 normalized data and excluding workforce again
+
+<ols_regression3>
+
+This model has Adj. R-squared:	0.753
+low std error of 0.016
+low Kurtosis: 2.168
+
+model_Test 5: introducing additional attr healthcare_workforce population per state
+We only have 2020-2021 data, so we need to exclude initial 2019 data from our previous table and join with workforce data.
+We did similair data processing to remove the null/duplicates data.
+Our total number of rows dropped by 200, but still have more than 800 rows data.
+We used the same Model4 to see the just the normalized ami and unemployment for the 2 years of data. 200-2021 model yield 0.84 adj.R-squared as the highest, and std error remianed low at 0.012.
+As COVID impacted unemployment rate significantly along with mental health of US population, it might have higher correlation compared to 2019.
+In order to have more accurate rate on the ami with slightly more data and based on our earlier correlation stats result, we decided to bring in ehalth_care workforce into our model.
+
+<OLS_regression workforce model>
+This time, our model Adj.R-squared improved to 0.901 whike both std error of unemployed and mentalhealth workforce remained low.
+And our low kurtosis indicating taht our data is normalized.
+
+
+
+-----------
+
+
+Predict Future
+
+The next machine learning model, we are llokuing at the future unemployment rate and understand the mental health trends of US in the near future without any action. 
+
+in this section we use the prephet funtion to perform time series projection on the unemployment data.
+The reason that we choose not directly use the mental_heath data is:
+This data set is only structured in YoY bases, and this is too little data to drove any meaningful projection.
+On the other hand, for unemployment data we have MoM state level unemployment rate for 2019-2021 3 years of period.
+
+
+Prediction plot:
+
+<future unemlpoyment data>
+
+
+- we predict into the future 12 months
+You can see the plot on our model's mape(mean absolute percent error) that as it gets longer into the future, our percent error increases.
+It looks like <180 days make senses to use for our next step of predicition.
+
+
+<Longer_future error>
+
+DISCLAIMER: THIS FUTURE AMI IS PREDICTED ON PREDICTED_UNEMLPOYMENT RATE. SO PLEASE TAKE THIS RESULT WITH AGRAIN OF state_population
+
+
+
+
+
