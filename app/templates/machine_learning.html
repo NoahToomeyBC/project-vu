@@ -97,9 +97,7 @@
 
     </div>
     <section class="fragment fragment-three">
-      <button onclick="mlShowHideFunc()">Try it</button>
-
-      <div id="myDIV" class="container-fluid">
+      <div id="prelimDiv" class="container-fluid">
         <header>
         </header>
         <div class="col-md-4" id="purposeHead">
@@ -118,6 +116,40 @@
             </li>
           </ul>
         </div>
+        <div id="imageHolders">
+          <!-- TODO: add img unemployment_correlation -->
+          <img id="containedImage" src='../static/images/map.png'>
+        </div>
+        <!-- Machine Learning Overview -->
+        <div id="normalizeDIV" class="container-fluid">
+          <header>
+          </header>
+          <div class="col-md-4" id="purposeHead">
+              <h3>Machine Learning: Normalization</h3>
+          </div>
+          <div class="col-md-8 center"  id="purposeBody">
+            <ul style="font-size: large;">
+  
+              <li style="color:white;">After the merge, when combining the data, researchers got rid of the null values caused by missing informaion..
+              </li>
+  
+              <li style="color:white;">
+                First we want to make sure our data has a normal distribution
+                using a matplotlit histogram, researchers found their data heavly skewed as the following:
+                <!-- unnormalized data -->
+              </li>
+              <div id="imageHolders">
+                <img id="containedImage" src='../static/images/map.png'>
+              </div>
+              <li style="color:white;">
+                So our first step is to normalize the data by using numpy log10() function as the follwoing:
+                <!-- normalized data -->
+              </li>
+            </ul>
+          </div>
+          <div id="imageHolders">
+            <img id="containedImage" src='../static/images/map.png'>
+          </div>
       </div>
     </section>
       <div class="container-fluid" style='padding-top: 20px';>

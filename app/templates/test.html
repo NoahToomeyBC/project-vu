@@ -4,39 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
-    <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">  
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/extensions/filter-control/bootstrap-table-filter-control.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Machine Learning: Mental Health in America</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/png" href="../static/images/favicon-32x32.png" sizes="32x32" />
+
+    <style>
+        p  {color: white;}
+        p  {text-align: center;}
+        h1 {color: rgb(252, 248, 248);}
+        h1 {text-align:center;}
+        h1 {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        h2 {color: rgb(252, 248, 248);}
+        h2 {text-align:center;}
+        h2 {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        h3 {color: rgb(252, 248, 248);}
+        h3 {text-align:center;}
+        h3 {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        table {color:white;}
+        a {color:white;}
+        li {color:darkblue;}
+      </style>
+    <link rel="stylesheet" href="../static/css/style_test.css">
+
 </head>
 <body>
-    <!-- The div that holds our map -->
-    <div id="mapid"></div>
+    <script language="JavaScript">
+        function setVisibility(id, visibility) {
+        document.getElementById(id).style.display = visibility;
+        }
+        </script>
+<input type=button name=type value='Show Layer' onclick="setVisibility('sub3', 'inline');";>
+<input type=button name=type value='Show Layer2' onclick="setVisibility('sub2', 'inline'); setVisibility('sub3', 'none');";>
+<input type=button name=type value='Hide Layer' onclick="setVisibility('sub3', 'none'); setVisibility('sub2', 'none');";> 
+<br><br>
+<input type=image name=imb src='images/show-layer.jpg'  onclick="setVisibility('sub3', 'inline');";>
 
+<div id="sub3">
+    <div id="prelimDiv" class="container-fluid">
+        <header>
+        </header>
+        <div class="col-md-4" id="purposeHead">
+            <h3>Preliminary Test</h3>
+        </div>
+        <div class="col-md-8 center"  id="purposeBody">
+          <ul style="font-size: large;">
 
+            <li style="color:white;">Before we getting into the complexity of machine learning, we want to quickly test out there is a strong correlationship between these data. So we used python pandas seaborn and numpy functions
+              to run a quick stats check.
+            </li>
 
+            <li style="color:white;">
+              Researchers found that between any_mental_health_pop and unemploment population, there is<b> 0.87 correlation coefficient. </b> &nbsp;
+              Given the strong evidence of the data, we move on with our linear regression model.
+            </li>
+          </ul>
+        </div>
+        <div id="imageHolders">
+          <!-- TODO: add img unemployment_correlation -->
+          <img id="containedImage" src='../static/images/map.png'>
+        </div>
+</div>
 
+</div>
+<div id="sub2">
+    <div id="prelimDiv" class="container-fluid">
+        <header>
+        </header>
+        <div class="col-md-4" id="purposeHead">
+            <h3>Preliminary Test</h3>
+        </div>
+        <div class="col-md-8 center"  id="purposeBody">
+          <ul style="font-size: large;">
 
+            <li style="color:white;">Before we getting into the complexity of machine learning, we want to quickly test out there is a strong correlationship between these data. So we used python pandas seaborn and numpy functions
+              to run a quick stats check.
+            </li>
 
-
-
-
-
-
-
-
-
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
-    <!-- API key -->
-    <script type="text/javascript" src="../static/js/config.js"></script>
-    <!-- Our JavaScript -->
-    <script type="text/javascript" src="../static/js/test_logic.js"></script>
-    
-</body>
+            <li style="color:white;">
+              Researchers found that between any_mental_health_pop and unemploment population, there is<b> 0.87 correlation coefficient. </b> &nbsp;
+              Given the strong evidence of the data, we move on with our linear regression model.
+            </li>
+          </ul>
+        </div>
+        <div id="imageHolders">
+          <!-- TODO: add img unemployment_correlation -->
+          <img id="containedImage" src='../static/images/map.png'>
+        </div>
+        <div id="imageHolders">
+            <!-- TODO: add img unemployment_correlation -->
+            <img id="containedImage" src='../static/images/map.png'>
+          </div>
 </html>
