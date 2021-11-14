@@ -106,7 +106,19 @@ This model has Adj. R-squared:	0.753
 low std error of 0.016
 low Kurtosis: 2.168
 
-model_Test 5: introducing 
+model_Test 5: introducing additional attr healthcare_workforce population per state
+We only have 2020-2021 data, so we need to exclude initial 2019 data from our previous table and join with workforce data.
+We did similair data processing to remove the null/duplicates data.
+Our total number of rows dropped by 200, but still have more than 800 rows data.
+We used the same Model4 to see the just the normalized ami and unemployment for the 2 years of data. 200-2021 model yield 0.84 adj.R-squared as the highest, and std error remianed low at 0.012.
+As COVID impacted unemployment rate significantly along with mental health of US population, it might have higher correlation compared to 2019.
+In order to have more accurate rate on the ami with slightly more data and based on our earlier correlation stats result, we decided to bring in ehalth_care workforce into our model.
+
+<OLS_regression workforce model>
+This time, our model Adj.R-squared improved to 0.901 whike both std error of unemployed and mentalhealth workforce remained low.
+And our low kurtosis indicating taht our data is normalized.
+
+
 
 -----------
 
