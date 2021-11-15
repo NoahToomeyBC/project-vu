@@ -99,9 +99,9 @@
     </div>
    
   <!-- Models -->
-  <div class="m-4">
+  <div class="m-8">
     <div class="btn-group">
-        <a href="#" class="dropdown-toggle btn-success" data-bs-toggle="dropdown">Choose A Model</a>
+        <a href="#" class="dropdown-toggle btn-success" id="dropMenu" data-bs-toggle="dropdown">Choose A Model</a>
         <div class="dropdown-menu">
             
             <a href="#" class="dropdown-item">
@@ -163,13 +163,13 @@
             </a>
             
             <a href="#" class="dropdown-item">
-              <input type=button class ="btn-success" name=type value='Model5' onclick="setVisibility('sub6', 'inline'); 
+              <input type=button class ="btn-success" name=type value='Model5' onclick="setVisibility('sub7', 'inline'); 
               setVisibility('sub1', 'none' );
               setVisibility('sub2', 'none' );
               setVisibility('sub3', 'none' );
               setVisibility('sub4', 'none' );
               setVisibility('sub5', 'none' );
-              setVisibility('sub7', 'none' );";>
+              setVisibility('sub6', 'none' );";>
             </a>             
             
 
@@ -179,6 +179,7 @@
 
 <section class="fragment fragment-three"> 
 <br><br>
+  <div style="padding-bottom: 40px;">
     <!-- Preliminary Model -->
     <div id="sub1">
       <div id="prelimDiv" class="container-fluid">
@@ -202,7 +203,7 @@
         </div>
         <div id="imageHolders">
           <!-- TODO: add img unemployment_correlation -->
-          <img id="containedImage" src='../static/model_image/unemployment_correlation.png'>
+          <img src='../static/model_image/unemployment_correlation.png'>
         </div>
     </div>
     </div>
@@ -382,7 +383,7 @@
     </div>
     </div>
     <!-- Model 5 -->
-    <div id="sub7" style="display:none">
+    <div id="sub7" style="display:none" >
       <div id="modelfiveDIV" class="container-fluid">
         <header>
         </header>
@@ -419,9 +420,10 @@
         </div>
         <!-- OLS_regression workforce model-->
         <div id="imageHolders">
-          <img id="containedImage" src='../static/model_image/OLS_regression workforce model.png'>
+          <img id="containedImage2" src='../static/model_image/OLS_regression workforce model.png'>
         </div>
-      <div class="col-md-4" id="purposeHead">
+      
+        <div class="col-md-4" id="purposeHead" >
           <h3><small>This time, our model Adj.R-squared improved to 0.901 while both std error of unemployed and mentalhealth workforce remained low.</small>
           <br><small>And our low kurtosis indicates that our data is normalized. </small> </h3>
       </div>
@@ -490,7 +492,39 @@
   </div>
 
   </section>
+<div>
+  <div class="container-fluid">
+    <header>
+    </header>
+    <div class="col-md-4" id="purposeHead">
+        <h3>Future Predictions</h3>
+    </div>
+    <div class="col-md-8 center"  id="purposeBody">
+      <ul style="font-size: large;">
 
+        <li style="color:white;">The following represents what will happen if nothing is done to stem unemployment and the mental illness cases that result from it.
+        </li>
+        
+        <div id="imageHolders">
+          <img src='../static/model_image/future_unemlpoyment data.png'>
+        </div>
+
+        <li style="color:white;">
+            Two year Prediction
+        </li>
+        <div id="imageHolders">
+          <img src='../static/model_image/longer_future error.png'>
+        </div>
+        <li style="color:white;">
+          You can see the plot on the model's M.A.P.E.(mean absolute percent error) shows that the longer it goes into the future, the more the percent error increases.
+          It looks like 180 days or less makes sense to use as the basis for the next step of predicition.
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</div>
 
 <script src="../static/js/konami.js"></script>
 <script src = "../static/js/logic_machine_learn.js"> </script>
