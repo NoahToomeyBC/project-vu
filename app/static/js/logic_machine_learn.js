@@ -29,3 +29,7 @@ $("#clickme2").click(function() {
   $("#clickme1").show();
   $("#clickme2").hide();
 });
+
+function setVisibility(id, visibility) {
+document.getElementById(id).style.display = visibility;
+}

@@ -37,14 +37,11 @@
         li {color:darkblue;}
       </style>
     <link rel="stylesheet" href="../static/css/style_test.css">
+    
 
 </head>
 <body>
-    <script language="JavaScript">
-        function setVisibility(id, visibility) {
-        document.getElementById(id).style.display = visibility;
-        }
-        </script>
+
 <input type=button name=type value='Show Layer' onclick="setVisibility('sub3', 'inline');";>
 <input type=button name=type value='Show Layer2' onclick="setVisibility('sub2', 'inline'); setVisibility('sub3', 'none');";>
 <input type=button name=type value='Hide Layer' onclick="setVisibility('sub3', 'none'); setVisibility('sub2', 'none');";> 

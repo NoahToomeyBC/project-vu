@@ -100,12 +100,12 @@
    
   <!-- Models -->
   <div class="m-4">
-    <div class="btn-group">
-        <a href="#" class="dropdown-toggle btn-success" data-bs-toggle="dropdown">Choose A Model</a>
+    <div class="dropdown">
+        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Choose A Model</a>
         <div class="dropdown-menu">
             
             <a href="#" class="dropdown-item">
-              <input type=button class ="btn-success" name=type value='Preliminary' onclick="setVisibility('sub1', 'inline'); 
+              <input type=button name=type value='Preliminary' onclick="setVisibility('sub1', 'inline'); 
               setVisibility('sub2', 'none' );
               setVisibility('sub3', 'none' );
               setVisibility('sub4', 'none' );
@@ -113,18 +113,19 @@
               setVisibility('sub6', 'none' );
               setVisibility('sub7', 'none' );";>
             </a>   
-            <a href="#" class="dropdown-item">
-              <input type=button class ="btn-success" name=type value='Normalization' onclick="setVisibility('sub2', 'inline'); 
+
+            <a href="#" class="dropdown-item"></a>
+              <input type=button name=type value='Normalization' onclick="setVisibility('sub2', 'inline'); 
               setVisibility('sub1', 'none' );
               setVisibility('sub3', 'none' );
               setVisibility('sub4', 'none' );
               setVisibility('sub5', 'none' );
               setVisibility('sub6', 'none' );
               setVisibility('sub7', 'none' );";>
-            </a>               
+            </a>
 
             <a href="#" class="dropdown-item">
-              <input type=button class ="btn-success" name=type value='Model1' onclick="setVisibility('sub3', 'inline'); 
+              <input type=button name=type value='Model1' onclick="setVisibility('sub3', 'inline'); 
               setVisibility('sub2', 'none' );
               setVisibility('sub1', 'none' );
               setVisibility('sub4', 'none' );
@@ -134,7 +135,7 @@
             </a>
 
             <a href="#" class="dropdown-item">
-              <input type=button class ="btn-success" name=type value='Model2' onclick="setVisibility('sub4', 'inline'); 
+              <input type=button name=type value='Model2' onclick="setVisibility('sub4', 'inline'); 
               setVisibility('sub1', 'none' );
               setVisibility('sub2', 'none' );
               setVisibility('sub3', 'none' );
@@ -143,7 +144,7 @@
               setVisibility('sub7', 'none' );";>
             </a>
             <a href="#" class="dropdown-item">
-              <input type=button class ="btn-success" name=type value='Model3' onclick="setVisibility('sub5', 'inline'); 
+              <input type=button name=type value='Model3' onclick="setVisibility('sub5', 'inline'); 
               setVisibility('sub1', 'none' );
               setVisibility('sub3', 'none' );
               setVisibility('sub4', 'none' );
@@ -153,7 +154,7 @@
             </a>
 
             <a href="#" class="dropdown-item">
-              <input type=button class ="btn-success" name=type value='Model4' onclick="setVisibility('sub6', 'inline'); 
+              <input type=button name=type value='Model4' onclick="setVisibility('sub6', 'inline'); 
               setVisibility('sub1', 'none' );
               setVisibility('sub2', 'none' );
               setVisibility('sub3', 'none' );
@@ -163,7 +164,7 @@
             </a>
             
             <a href="#" class="dropdown-item">
-              <input type=button class ="btn-success" name=type value='Model5' onclick="setVisibility('sub6', 'inline'); 
+              <input type=button name=type value='Model5' onclick="setVisibility('sub6', 'inline'); 
               setVisibility('sub1', 'none' );
               setVisibility('sub2', 'none' );
               setVisibility('sub3', 'none' );
@@ -208,7 +209,7 @@
     </div>
 
     <!-- Normalization -->
-    <div id="sub2" style="display:none">
+    <div id="sub2">
         <div id="normalizeDIV" class="container-fluid">
           <header>
           </header>
@@ -241,7 +242,7 @@
       </div>
     </div>
     <!-- Model 1 -->
-    <div id="sub3" style="display:none">
+    <div id="sub3">
       <div id="modelOneDIV" class="container-fluid">
         <header>
         </header>
@@ -276,7 +277,7 @@
     </div>
     </div>
     <!-- Model 2 -->
-    <div id="sub4" style="display:none">
+    <div id="sub4">
       <div id="modelTwoDIV" class="container-fluid">
         <header>
         </header>
@@ -312,12 +313,12 @@
     </div>
 
     <!-- Model 3 -->
-    <div id="sub5" style="display:none">
+    <div id="sub5">
       <div id="modelThreeDIV" class="container-fluid">
         <header>
         </header>
         <div class="col-md-4" id="purposeHead">
-            <h3>Machine Learning: Model Test #3 <br><small>In order to continue finding the best model, researchers introduced an ols model from statsmodels.formula.api </small> </h3>
+            <h3>Machine Learning: Model Test #2 <br><small>In order to continue finding the best model, researchers introduced an ols model from statsmodels.formula.api </small> </h3>
         </div>
         <div class="col-md-8 center"  id="purposeBody">
           <ul style="font-size: large;">
@@ -348,7 +349,7 @@
     </div>
   
     <!-- Model 4 -->
-    <div id="sub6" style="display:none">
+    <div id="sub6">
       <div id="modelFourDIV" class="container-fluid">
         <header>
         </header>
@@ -382,7 +383,7 @@
     </div>
     </div>
     <!-- Model 5 -->
-    <div id="sub7" style="display:none">
+    <div id="sub7">
       <div id="modelfiveDIV" class="container-fluid">
         <header>
         </header>
