@@ -177,10 +177,12 @@ We utilized both Leaflet and Plotly to handle all of our visualizations which ca
 
 
 ## Machine Learning
- 
-  Science
-  
-Please ML folder for ML related updates
+
+Please check out ML_test folder for ML model assumptions and explanation.
+Based on our assumptions and data types, we choose to use the following machine learning model library.
+  - Linear Regression from SKlearn
+  - OLS Statesmodel
+  - Prophet for tiem series data 
   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
