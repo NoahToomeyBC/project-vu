@@ -12,7 +12,9 @@ licensed clinical social workers, counselors, marriage and family
 therapists, and advanced practice nurses specializing in mental health
 care.
 
-3. Data_3: unemloyment rate from the 
+3. Data_3: from U.S. Bureau of Labor Statistics Latest Numbers
+
+US unemlpoyment rates by states from 2019-2021
 
 OLS Assumtions
 
