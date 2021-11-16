@@ -169,8 +169,11 @@ A [python script](https://github.com/PazilatNur/project-vu/blob/main/dataframe_s
 
   
 ## Data Visualization
-
+For interactive charts:
 We utilized both Leaflet and Plotly to handle all of our visualizations which can be accessed through our [website!](https://piechart-project.herokuapp.com) 
+
+For still charts:
+We utilized matplotlib and sns
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
