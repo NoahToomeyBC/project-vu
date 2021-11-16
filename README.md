@@ -88,7 +88,6 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Data Sources
@@ -97,7 +96,7 @@ To get a local copy up and running follow these simple example steps.
 
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone git@github.com:NoahToomeyBC/project-vu.git
    ```
 3. Install Requirements in your preffered bash CLI
    ```sh
