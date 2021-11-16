@@ -182,7 +182,7 @@ Please check out ML_test folder for ML model assumptions and explanation.
 Based on our assumptions and data types, we choose to use the following machine learning model library.
   - Linear Regression from SKlearn
   - OLS Statesmodel
-  - Prophet for tiem series data 
+  - Prophet for time series data 
   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
