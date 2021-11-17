@@ -451,7 +451,7 @@ $.getJSON(link,function(data){
     labels2 = ['<strong>Employment Rate</strong>'];
 
   
-    const percentage2 = [0,85,87,9,92, 94, 94.5, 95, 95.5, 96, 96.5, 97, 97.5];
+    const percentage2 = [0,85,87,90,92, 94, 94.5, 95, 95.5, 96, 96.5, 97, 97.5];
     const colors2 = [
       "#006d2c",
       "#013220",
