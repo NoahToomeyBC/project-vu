@@ -128,10 +128,11 @@ $.getJSON(link,function(data){
     style: styleInfo,
      // Create Circle popups
      onEachFeature: function(feature, layer) {
-      layer.bindPopup(" <b>State:</b> " + feature.properties.State + 
-      "<br> <b>Rank:</b> " + feature.properties.Rank_ami_2019 +
-      "<br> <b>Population of Respondents:</b> " + feature.properties.pop_ami_2019 +
-      "<br> <b>Percentage of Respondents:</b> " + feature.properties.percent_ami_2019 );
+      layer.bindPopup(" <b>State: " + feature.properties.State + 
+      "<br> <b>Rank:</b> " + feature.properties.Rank_adult_ami_2019 +
+      "<br><b>Population of Respondents:</b> " + feature.properties.pop_adult_ami_2019 +
+      "<br><b>Percentage of Respondents:</b> " + feature.properties.percent_adult_ami_2019 +
+      "<br> <b>Amount of Citizens Per Mental Health Care Worker (Approximate):</b> " + (feature.properties.healthcare_workers_per_person_2020 + feature.properties.healthcare_workers_per_person_2021) /2 );
     }
   }).addTo(allMentalIllness2019);
     allMentalIllness2019.addTo(map);
@@ -197,7 +198,7 @@ $.getJSON(link,function(data){
         "<br> <b>Rank:</b> " + feature.properties.Rank_adult_ami_2020 +
         "<br><b>Population of Respondents:</b> " + feature.properties.pop_adult_ami_2020 +
         "<br><b>Percentage of Respondents:</b> " + feature.properties.percent_adult_ami_2020 +
-        "<br> <b>Amount of Citizens Per Mental Health Care Worker (Approximate):</b> " + (feature.properties.healthcare_workers_per_person_2020 + feature.properties.healthcare_workers_per_person_2021) /2 );
+        "<br> <b>Amount of Citizens Per Mental Health Care Worker:</b> " +  feature.properties.healthcare_workers_per_person_2020);
       }
     }).addTo(allMentalIllness2020);
     $.getJSON(link,function(data){
